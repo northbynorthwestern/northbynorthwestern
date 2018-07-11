@@ -29,7 +29,31 @@ We're planning to use [React](https://reactjs.org/) to implement the reader-faci
 ![Staff page](http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2018/07/03/Author_page.png)
 
 ### Backend
-We want the reporter-facing side of the site to gel with the natural workflow of our staff. The editorial team uses Google docs to write and collaborate on stories, so we want to build a backend that works seamlessly with the team's current processes. We'll use the [Google Drive API](https://developers.google.com/drive/) (along with tools like [ArchieML](http://archieml.org/), [Amazon S3](https://aws.amazon.com/s3/), [Browserify](http://browserify.org/), [Gulp](https://gulpjs.com/), etc.) to pull articles directly from writers' docs to the site. Here's one high-level idea of how our technology can work with our staff's workflow:
+We want the reporter-facing side of the site to gel with the natural workflow of our staff. The editorial team uses Google docs to write and collaborate on stories, so we want to build a backend that works seamlessly with the team's current processes.
+
+In order to do this, we need systematically formatted Google docs so we can identify different assets/information in a story and reliably create article pages from that format. To make this easier for the editorial staff, we are creating a [Google add-on](https://developers.google.com/apps-script/add-ons/) where a writer can select a formatted block from a sidebar to put their content inside. A formatted block for an article header might look like:
+```
+Headline: ''
+Subhead: ''
+Author: ''
+```
+Where an author would fill in the values to the right of the colons. A formatted block for an image would be:
+```
+[.photo]
+link:
+caption:
+credit:
+[]
+```
+Here's one high-level idea of how our technology can work with our staff's workflow:
+* There will be article skeletons with basic formatting pre-made for each section. Reporters can make a copy of that skeleton and write their story just like normal.
+* If the writer or their editor wants to add any special assets -- images, pull quotes, etc. -- they can use the Google add-on to find the formatting block for that component.
+* Editors and writers can comment and make changes just like normal.
+* When an article is complete, the editor/reporter should double-check the Google doc's formatting just like they might double-check spelling or a source's information.
+
+
+
+We'll use the [Google Drive API](https://developers.google.com/drive/) (along with tools like [ArchieML](http://archieml.org/), [Amazon S3](https://aws.amazon.com/s3/), [Browserify](http://browserify.org/), [Gulp](https://gulpjs.com/), etc.) to pull articles directly from writers' docs to the site. Here's one high-level idea of how our technology can work with our staff's workflow:
 
 * A reporter will write their story in a Google doc just like normal. The only difference will be some light formatting: [light formatting example](http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2018/07/03/Web_Redesign_Style_Guide.pdf)
 In this doc, writers and reporters can add images, create pull quotes, and more just by adding a few formatted lines! We'll have a document with all the Google doc shortcuts so any staff member can add features beyond just the article itself.
