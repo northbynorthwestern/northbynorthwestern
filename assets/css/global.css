@@ -1,0 +1,78 @@
+/* Variables
+/* ---------------------------------------------------------- */
+
+:root {
+    /* General Colors */
+    --purple: #59437f;
+    --darkgrey: #15171A;
+    --lightgrey: #c5d2d9;
+    --black: #17202a;
+    --white: #fdfefe;
+
+    /* Section Colors */
+    /* News */
+    --bluegrey: #607d8b;
+    /* Features */
+    --turquoise: #45b29d;
+    /* Life & Style */
+    --pink: #ff8b8b;
+    /* Entertainment */
+    --orange: #e27a3f;
+    /* Writing */
+    --tan: #ffdbb0;
+    /* Sports */
+    --red: #b04d5d;
+    /* Politics */
+    --amber: #ffc107;
+    /* Science & Technology */
+    --green: #5c832f;
+    /* Opinion */
+    --yellow: #fcc314;
+    /* Multimedia -- Photo, audio, video, interactive */
+    --mediumblue: #5f72b2;
+    /* Magazine */
+    --lightpurple: #834bb8;
+}
+
+h1 {
+  font-family: "PT Sans Condensed";
+  font-weight: bold;
+}
+
+h1 .title {
+  font-size: 8.25em;
+}
+
+h1 .nbn-head {;
+  font-size: 7.3125em;
+}
+
+h2 .subtitle {
+  font-family: "Work Sans";
+}
+
+h3 {
+  font-family: "Work Sans";
+  text-transform: uppercase;
+}
+
+h3 .byline {
+  color: purple;
+}
+
+h3 .date {
+  color: darkgrey;
+}
+
+h3 .menu {
+  color: white;
+}
+
+p {
+  font-family: "Lora";
+  font-weight: normal;
+  font-size: .875em;
+}
+p .caption {
+  font-weight: bold;
+}
