@@ -1,29 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
 
-  {{!-- Document Settings --}}
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    {{!-- Document Settings --}}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  {{!-- Base Meta --}}
-  <title>{{meta_title}}</title>
-  <meta name="HandheldFriendly" content="True" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {{!-- Base Meta --}}
+    <title>{{meta_title}}</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  {{!-- Styles'n'Scripts --}}
-  <!--  <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />-->
+    {{!-- Styles'n'Scripts --}}
+     <link rel="stylesheet" type="text/css" href="./assets/css/global.css" />
+     <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
 
 
-  {{!-- This tag outputs SEO meta+structured data and other important settings --}}
-  {{ghost_head}}
-</head>
-<body>
-  <div class="site-nav">
-  </div>
-  <h1> YOOOO </h1>
-  {{{body}}}
-</body>
-<footer>
-  {{ghost_footer}}
-</footer>
+    {{!-- This tag outputs SEO meta+structured data and other important settings --}}
+    {{ghost_head}}
+  </head>
+  <body>
+    <div>
+      {{> banner}}
+    </div>
+    <h1 class="title"> North by Northwestern Default Page </h1>
+    {{{body}}}
+
+    {{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
+    <footer>
+      {{ghost_foot}}
+    </footer>
+  </body>
+</html>
