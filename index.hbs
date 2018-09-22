@@ -1,0 +1,7 @@
+{{!< default}}
+{{!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template --}}
+<script> console.log("hey in index")</script>
+{{#foreach posts}}
+  {{> "front-page-post-card"}}
+{{/foreach}}
