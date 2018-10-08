@@ -6,8 +6,12 @@ production stylesheet in assets/built/global.css
 
 1.  Global Variables
 2.  Global Styles
-3.  Site Header
-4.  Post Card
+3.  Site Header (Purple header)
+4.  Front Page Feature Card (featured top story)
+5.  Front Page Post Card (stories in the "What's up" section)
+6.  Article Page
+  6.1. Navigation Sidebar
+  6.2. Article Main
 
 -- Ghost stuff below..
 4.  Special Templates
@@ -74,13 +78,18 @@ body {
   background: var(--white);
 }
 
+main {
+  padding: 2.5% 5%;
+}
+
 h1 {
   font-family: 'PT Sans Narrow', sans-serif;
   font-weight: bold;
 }
 
 h1.title {
-  font-size: 4.25em;
+  font-size: 2.8em;
+  line-height: 97.5%;
 }
 
 h2.subtitle {
@@ -90,18 +99,37 @@ h2.subtitle {
 h3 {
   font-family: 'Work Sans', sans-serif;
   text-transform: uppercase;
+  font-size: 1em;
+  color: darkgrey;
+  font-weight: lighter;
+  margin: 0;
+  letter-spacing: -0.5px;
+  font-weight: 400;
 }
 
-h3.byline {
-  color: purple;
+h3.byline a {
+  color: var(--purple);
+  font-weight: normal;
+  text-decoration: underline;
 }
 
 h3.date {
-  color: darkgrey;
+
 }
 
 h3.menu {
   color: white;
+  font-size: .9em;
+  font-weight: 200;
+}
+
+h4.nav-sidebar-sections {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 1.3em;
+  color: var(--black);
+  text-transform: lowercase;
+  font-weight: normal;
+  margin: 0px;
 }
 
 p {
@@ -139,10 +167,21 @@ img.nbn-banner-logo {
   padding: 5px;
 }
 
+div.head-and-nav {
+
+}
+
 h1.nbn-head {
   font-size: 2.5em;
   color: var(--white);
-  padding: 5px;
+  margin-bottom: 0px;
+}
+
+div.site-nav {
+  display: flex;
+  flex-direction: row;
+  width: 125%;
+  justify-content: space-between;
 }
 
 img.nbn-social-media-icon {
@@ -151,9 +190,40 @@ img.nbn-social-media-icon {
   padding: 5px;
 }
 
+/* 4. Front Page Feature Card (featured top story)
+/* ---------------------------------------------------------- */
+div.feature-card-container-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 2.5%;
+}
+
+.feature-photo {
+  margin-right: 2.5%;
+}
+
+.feature-headline {
+
+}
+
+/* 6. Article Page
+/* ---------------------------------------------------------- */
+/**/
+div.article-page {
+  display: flex;
+  flex-direction: row;
+}
+
+/* 6.1 Navigation Sidebar */
+/**/
+div.nav-sidebar {
+  display: flex;
+  flex-direction: column;
+}
 
 
-/* 4. Post Card
+/* 5. Front Page Post Card (stories in the "What's up" section)
 /* ---------------------------------------------------------- */
 
 div.post-card-container-wrapper {

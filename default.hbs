@@ -13,22 +13,23 @@
 
     {{!-- Styles'n'Scripts --}}
      <link rel="stylesheet" type="text/css" href="./assets/css/global.css" />
-     <link href="https://fonts.googleapis.com/css?family=Lora|PT+Sans+Narrow|Work+Sans" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Lora|PT+Sans+Narrow:400,700|Work+Sans:200,300,400,600" rel="stylesheet">
 
 
     {{!-- This tag outputs SEO meta+structured data and other important settings --}}
     {{ghost_head}}
   </head>
   <body>
-    <div>
+    <header>
       {{> "banner"}}
-    </div>
+    </header>
+    <main>
+      <div>
+        {{> "front-page-feature-card"}}
+      </div>
 
-    <div>
-      {{> "front-page-feature-card"}}
-    </div>
-
-    {{{body}}}
+      {{{body}}}
+    </main>
 
     {{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
     <footer>

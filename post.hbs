@@ -1,5 +1,42 @@
-<script> console.log("hey in post")</script>
-{{#post}}
-{{content}}
-<p> post {{title}} </p>
-{{/post}}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    {{!-- Document Settings --}}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{!-- Base Meta --}}
+    <title>{{meta_title}}</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {{!-- Styles'n'Scripts --}}
+     <link rel="stylesheet" type="text/css" href="./../assets/css/global.css" />
+     <link href="https://fonts.googleapis.com/css?family=Lora|PT+Sans+Narrow:400,700|Work+Sans:200,300,400,600" rel="stylesheet">
+
+
+    {{!-- This tag outputs SEO meta+structured data and other important settings --}}
+    {{ghost_head}}
+    <script> console.log("hey in post")</script>
+  </head>
+  <body>
+    <header>
+      {{> "banner"}}
+    </header>
+    <main>
+      <div class="article-page">
+        {{> "nav-sidebar-sections" }}
+        <div class="article-container">
+          {{#post}}
+          <h1 class="post-card-text" class="post-card-title"><a href={{url}}> {{title}} </a></h1>
+          <h1 class="post-card-text" class="post-card-author"> {{author}} </h1>
+          <h1 class="post-card-text" class="post-card-date"> {{date}} </h1>
+          {{/post}}
+        </div>
+        <div class="content-sidebar"></div>
+      </div>
+      {{!--{{#post}}{{content}}{{/post}} --}}
+    </main>
+  </body>
+</html>
