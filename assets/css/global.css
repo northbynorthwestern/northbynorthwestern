@@ -132,10 +132,10 @@ h4.nav-sidebar-sections {
   margin: 0px;
 }
 
-p {
+p, li {
   font-family: 'Lora', serif;
   font-weight: normal;
-  font-size: .875em;
+  font-size: 1em;
 }
 p.caption {
   font-weight: bold;
@@ -213,13 +213,36 @@ div.feature-card-container-wrapper {
 div.article-page {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
-/* 6.1 Navigation Sidebar */
+/* 6.1 Navigation Sidebar + Related Content Sidebar */
 /**/
-div.nav-sidebar {
+div.nav-sidebar, div.related-content-sidebar {
   display: flex;
   flex-direction: column;
+}
+
+div.nav-sidebar {
+  margin-right: 5%;
+}
+
+div.related-content-sidebar {
+  margin-left: 5%;
+  background-color: var(--white);
+  padding: 5%;
+  width: fit-content;
+}
+
+/* 6.1 Article Body */
+/**/
+div.article-body {
+
+}
+
+div.article-container {
+  background-color: var(--white);
+  padding: 5%;
 }
 
 
