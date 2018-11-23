@@ -12,6 +12,7 @@ production stylesheet in assets/built/global.css
 6.  Article Page
   6.1. Navigation Sidebar
   6.2. Article Main
+7. Author Page
 
 -- Ghost stuff below..
 4.  Special Templates
@@ -41,6 +42,7 @@ production stylesheet in assets/built/global.css
     --purple: #59437f;
     --darkgrey: #15171A;
     --lightgrey: #c5d2d9;
+    --lightestgrey: #f4f8fb;
     --black: #17202a;
     --white: #fdfefe;
 
@@ -132,13 +134,20 @@ h4.nav-sidebar-sections {
   margin: 0px;
 }
 
-p {
+p, li {
   font-family: 'Lora', serif;
   font-weight: normal;
-  font-size: .875em;
+  font-size: 1em;
 }
 p.caption {
   font-weight: bold;
+}
+
+a.no-style {
+  text-decoration: none;
+  margin: 0px;
+  padding: 0px;
+  color: inherit;
 }
 
 
@@ -213,13 +222,36 @@ div.feature-card-container-wrapper {
 div.article-page {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
-/* 6.1 Navigation Sidebar */
+/* 6.1 Navigation Sidebar + Related Content Sidebar */
 /**/
-div.nav-sidebar {
+div.nav-sidebar, div.related-content-sidebar {
   display: flex;
   flex-direction: column;
+}
+
+div.nav-sidebar {
+  margin-right: 5%;
+}
+
+div.related-content-sidebar {
+  margin-left: 5%;
+  background-color: var(--white);
+  padding: 5%;
+  width: fit-content;
+}
+
+/* 6.1 Article Body */
+/**/
+div.article-body {
+
+}
+
+div.article-container {
+  background-color: var(--white);
+  padding: 5%;
 }
 
 
@@ -283,20 +315,26 @@ h1.post-card-container-title {
   align-content: space-around;
 }
 
-.post-card-text {
+p.post-card-text {
+  font-family: 'PT Sans Narrow', sans-serif;
   font-size: 1em;
   width: 150px;
   margin: 0 0 0 3px;
 }
 
-.post-card-title {
-  font-weight: lighter;
-  font-color: var(--darkgrey);
+p.post-card-title {
+  font-weight: 400;
+  color: var(--darkgrey);
 }
 
-.post-card-author {
-  font-weight: bold;
+p.post-card-author {
+  font-weight: 700;
   text-transform: uppercase;
+}
+
+a.post-card-text-link {
+  text-decoration: none;
+  color: var(--darkgrey);
 }
 
 .post-feed {
@@ -312,6 +350,52 @@ h1.post-card-container-title {
     transition: all 0.4s ease;
     transform: translate3D(0, -1px, 0) scale(1.02);
 }
+
+
+/* 5. Site Footer
+/* ---------------------------------------------------------- */
+
+.footer-all {
+  margin-top: 75px;
+  min-height: 100px;
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+p.footer {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 1em;
+  width: 150px;
+  margin: 0 0 0 3px;
+}
+
+/* 7. Author Page
+/* ---------------------------------------------------------- */
+
+h1.author-name {
+  font-weight: lighter;
+}
+
+div.author-bio {
+  background-color: var(--lightestgrey);
+}
+
+
+
+
+/* GHOST STUFF */ /* GHOST STUFF */ /* GHOST STUFF */ /* GHOST STUFF */ /* GHOST STUFF */
+/* GHOST STUFF */ /* GHOST STUFF */ /* GHOST STUFF */ /* GHOST STUFF */ /* GHOST STUFF */
+/* GHOST STUFF */ /* GHOST STUFF */ /* GHOST STUFF */ /* GHOST STUFF */ /* GHOST STUFF */
+/* GHOST STUFF */ /* GHOST STUFF */ /* GHOST STUFF */ /* GHOST STUFF */ /* GHOST STUFF */
+/* GHOST STUFF */ /* GHOST STUFF */ /* GHOST STUFF */ /* GHOST STUFF */ /* GHOST STUFF */
 
 /* .post-card-image-link {
     position: relative;
@@ -592,7 +676,7 @@ production stylesheet in assets/built/screen.css
 @import "global.css";
 
 body {
-    background: #f4f8fb;
+    /* background: #f4f8fb; */
 }
 
 .img {

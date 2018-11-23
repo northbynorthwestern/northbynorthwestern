@@ -29,12 +29,20 @@
         {{> "nav-sidebar-sections" }}
         <div class="article-container">
           {{#post}}
-          <h1 class="post-card-text" class="post-card-title"><a href={{url}}> {{title}} </a></h1>
-          <h1 class="post-card-text" class="post-card-author"> {{author}} </h1>
-          <h1 class="post-card-text" class="post-card-date"> {{date}} </h1>
+          <h3 class="byline"><a href="">{{author}},</a> Fake Writer </h3>
+          <h3 class="date"> 10/10/18 10:13 p.m. </h3>
+          <p></p>
+          <img src="./../assets/images/show-review.jpg" width="100%">
+          <h1 class="title"> {{title}} </h1>
+          <div class="article-body">
+            <p> {{content}} </p>
+          </div>
           {{/post}}
+          <p> for safekeeping this is a link to the article <a href={{url}}>article</a> </p>
         </div>
-        <div class="content-sidebar"></div>
+        <div class="content-sidebar">
+          {{> "related-content-article-sidebar"}}
+        </div>
       </div>
       {{!--{{#post}}{{content}}{{/post}} --}}
     </main>
