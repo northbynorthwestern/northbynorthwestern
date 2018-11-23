@@ -1,0 +1,26 @@
+{{!< default}}
+
+<div class="hold">
+{{#author}}
+  <h1 class="author-name">{{name}}</h1>
+  <div class="author-bio">
+    {{bio}}
+  </div>
+  <img src={{profile_image}} alt='{{name}}'>
+
+{{/author}}
+</div>
+
+
+<!--
+Here's the logic:
+Article feed: for every article an author has written/contributed to,
+render it in a feed format. This will happen just by having authors get "tagged"
+as articles are posted.
+
+Page title/URL: The author's name will be displayed at top of Page
+
+Positions box: This will actually just be the person's bio box. we also might take
+the facebook URL area to write out someone's current title. (investigate this!!)
+
+ -->
