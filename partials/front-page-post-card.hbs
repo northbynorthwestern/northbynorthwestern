@@ -1,14 +1,13 @@
-<!-- <a href="{{url}}"> -->
+
   <div class="post-card">
+    <a href="{{url}}">
     <img class="post-card-image" src="{{feature_image}}">
     <!-- <div class="post-card-image" style="background-image: url({{feature_image}})"></div> -->
     <div class="post-card-text-container">
       <p class="post-card-text post-card-title">
         <a class="post-card-text-link" href={{url}}> {{title}} </a>
       </p>
-      <p class="post-card-text post-card-author">
-        <a class="post-card-text-link" href={{url}}> {{author}} </a>
-      </p>
+      <p class="post-card-text post-card-author">{{author.name}}</p>
       <p class="post-card-text post-card-date"> {{date}} </p>
     </div>
     <!-- <div class="default-postcard">
@@ -16,5 +15,15 @@
         <h2 class="post-card-title">{{title}}</h2>
       </a>
     </div> -->
+    <div class="section-stories">
+      {{#get posts}}
+        {{#foreach posts}}
+          {{#has tag="news"}}
+            <p1> hey </p1>
+            {{> "post-card"}}
+          {{/has}}
+        {{/foreach}}
+      {{/get}}
+    </div>
+  </a>
   </div>
-  <!-- </a> -->

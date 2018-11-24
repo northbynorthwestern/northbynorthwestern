@@ -132,6 +132,7 @@ h4.nav-sidebar-sections {
   text-transform: lowercase;
   font-weight: normal;
   margin: 0px;
+  white-space: nowrap;
 }
 
 p, li {
@@ -148,6 +149,11 @@ a.no-style {
   margin: 0px;
   padding: 0px;
   color: inherit;
+}
+
+a {
+  color: var(--purple);
+  text-decoration: none;
 }
 
 
@@ -213,7 +219,7 @@ div.feature-card-container-wrapper {
 }
 
 .feature-headline {
-
+  margin-left: 30px;
 }
 
 /* 6. Article Page
@@ -259,11 +265,12 @@ div.article-container {
 /* ---------------------------------------------------------- */
 
 div.post-card-container-wrapper {
-  background-color: var(--lightgrey);
-  height: 120px;
+  background-color: var(--lightestgrey);
+  height: 150px;
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-bottom: 5%;
 }
 
 div.post-card-container {
@@ -271,16 +278,19 @@ div.post-card-container {
   height: 120px;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: start;
   justify-content: space-between;
   overflow: scroll;
+  margin-top: 20px;
+  padding-top: 20px;
 }
 
 h1.post-card-container-title {
   color: var(--purple);
   text-transform: uppercase;
   text-align: right;
-  padding: 0px 20px;
+  padding: 0px 30px;
+  width: 10%;
 }
 
 .post-card {
@@ -311,30 +321,48 @@ h1.post-card-container-title {
 .post-card-text-container {
   display: flex;
   flex-direction: column;
-  width: 170px;
+  width: 190px;
   align-content: space-around;
 }
 
 p.post-card-text {
   font-family: 'PT Sans Narrow', sans-serif;
   font-size: 1em;
-  width: 150px;
+  width: 170px;
   margin: 0 0 0 3px;
+  color: var(--darkgrey);
 }
 
 p.post-card-title {
   font-weight: 400;
-  color: var(--darkgrey);
+  font-size: 1em;
+  max-width: 150px;
 }
 
 p.post-card-author {
   font-weight: 700;
   text-transform: uppercase;
+  font-size: .9em;
+  max-width: 150px;
 }
 
 a.post-card-text-link {
   text-decoration: none;
   color: var(--darkgrey);
+}
+
+p.post-card-date {
+  font-size: .9em;
+  max-width: 150px;
+}
+
+h3.post-card-more {
+  align-self: flex-end;
+  padding-bottom: 5px;
+}
+
+a.post-card-more-link {
+  text-decoration: none;
 }
 
 .post-feed {
@@ -349,6 +377,40 @@ a.post-card-text-link {
     box-shadow: rgba(39,44,49,0.07) 8px 28px 50px, rgba(39, 44, 49, 0.04) 1px 6px 12px;
     transition: all 0.4s ease;
     transform: translate3D(0, -1px, 0) scale(1.02);
+}
+
+/* 5. Front Page Bottom Sections
+/* ---------------------------------------------------------- */
+.all-section-blocks {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div.section-block {
+  width: 30%;
+  margin-right: 3%;
+}
+
+div.section-block-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+h3.section-name {
+  font-weight: 700;
+  padding-bottom: 5px;
+}
+
+.section-block-divider {
+  width: 100%;
+  height: 5px;
+  background-color: var(--purple);
+}
+
+.section-stories {
+  display: flex;
+  flex-direction: column;
 }
 
 
