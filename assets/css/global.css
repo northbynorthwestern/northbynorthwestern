@@ -317,6 +317,7 @@ div.whats-up-post-card {
   flex-direction: row;
   max-width: fit-content;
   padding: 5px 0px;
+  align-items: center;
   /* margin: 0px 10px; */
     /* flex: 1 1 300px;
     display: flex;
@@ -370,6 +371,7 @@ p.post-card-author {
   text-transform: uppercase;
   font-size: .9em;
   max-width: 150px;
+  color: var(--darkgrey);
 }
 
 a.post-card-text-link {
@@ -511,7 +513,7 @@ p.footer {
   margin: 0 0 0 3px;
 }
 
-/* 7. Author Page
+/* 7. Author Page, Section Page
 /* ---------------------------------------------------------- */
 
 .author-page {
@@ -524,7 +526,7 @@ p.footer {
   align-items: center;
 }
 
-h1.author-name {
+h1.author-name, h1.section-name {
   font-weight: lighter;
   color: var(--purple);
   margin: 1% 2.5% 1% 0;
@@ -542,7 +544,7 @@ p.author-bio-text {
   max-width: 90%;
 }
 
-div.author-post-card {
+div.author-post-card, div.section-post-card {
   margin-bottom: 1.5%;
 }
 

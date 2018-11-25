@@ -1,5 +1,17 @@
 {{!< default}}
 
+<div class="section-page">
+{{#tag}}
+  <div class="section-info">
+    <h1 class="section-name">{{name}}</h1>
+  </div>
+  <!-- <div class="author-bio-container">
+    <p class="author-bio-text">{{bio}}</p>
+  </div> -->
+{{/tag}}
 {{#foreach posts}}
-  {{> "front-page-post-card"}}
+  <div class="section-post-card">
+    {{> "section-post-card"}}
+  </div>
 {{/foreach}}
+</div>

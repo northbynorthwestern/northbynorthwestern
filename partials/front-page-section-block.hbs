@@ -5,7 +5,7 @@
   </div>
   <div class="section-block-divider"></div>
   <div class="section-posts">
-    {{#get "posts" filter="tag:{{name}}"}}
+    {{#get "posts" filter="tag:{{slug}}" limit="4"}}
       {{#foreach posts}}
         {{> "front-page-post-card"}}
       {{/foreach}}
