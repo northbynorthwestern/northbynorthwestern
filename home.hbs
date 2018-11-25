@@ -1,11 +1,11 @@
 {{!< default}}
 
 <div>
-  {{#foreach posts}}
-    {{#if featured}}
+  {{#get "posts" filter="featured:true" limit="1" include="authors"}}
+    {{#posts}}
       {{> "front-page-feature-card"}}
-    {{/if}}
-  {{/foreach}}
+    {{/posts}}
+  {{/get}}
 </div>
 
 <div class="post-card-container-wrapper">
