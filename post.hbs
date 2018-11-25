@@ -1,52 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-
-    {{!-- Document Settings --}}
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-    {{!-- Base Meta --}}
-    <title>{{meta_title}}</title>
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    {{!-- Styles'n'Scripts --}}
-     <link rel="stylesheet" type="text/css" href="./../assets/css/global.css" />
-     <link href="https://fonts.googleapis.com/css?family=Lora|PT+Sans+Narrow:400,700|Work+Sans:200,300,400,600" rel="stylesheet">
-
-
-    {{!-- This tag outputs SEO meta+structured data and other important settings --}}
-    {{ghost_head}}
-    <script> console.log("hey in post")</script>
-  </head>
-  <body>
-    <header>
-      {{> "banner"}}
-    </header>
-    <main>
-      <div class="article-page">
-        {{> "nav-sidebar-sections" }}
-        <div class="article-container">
-          {{#post}}
-          <h3 class="byline"><a href="">{{author}},</a> {{author.location}} </h3>
-          <h3 class="date"> {{date format='DD-MM-YYYY'}} </h3>
-          <p></p>
-          {{#if feature_image}}
-            <img src="{{feature_image}}" width="100%">
-          {{/if}}
-          <h1 class="title"> {{title}} </h1>
-          <div class="article-body">
-            <p> {{content}} </p>
+{{!< default}}
+<div class="article-page">
+  <div class="article-page">
+    <div class="nav-sidebar">
+      {{#get "tags" limit="all"}}
+        {{#foreach tags}}
+          {{> "nav-sidebar-sections" }}
+        {{/foreach}}
+      {{/get}}
+    </div>
+  </div>
+  {{#post}}
+  <div class="article-container">
+    {{#if feature_image}}
+      <img src="{{feature_image}}" width="100%">
+    {{/if}}
+    <h1 class="title"> {{title}} </h1>
+    <h3 class="byline"><a href={{author.url}}>{{author}},</a> {{author.location}} </h3>
+    <h3 class="date"> {{date format='DD-MM-YYYY'}} </h3>
+    <div class="article-body">
+      <p> {{content}} </p>
+    </div>
+  </div>
+  <div class="content-sidebar">
+    <div class="related-content-sidebar">
+        {{#get "posts" filter="authors:{{primary_author.slug}}+id:-{{id}}" limit='3'}}
+        {{#foreach posts}}
+          <div class="author-related-post">
+            {{> "front-page-post-card"}}
           </div>
-          {{/post}}
-          <p> for safekeeping this is a link to the article <a href={{url}}>article</a> </p>
-        </div>
-        <div class="content-sidebar">
-          {{> "related-content-article-sidebar"}}
-        </div>
-      </div>
-      {{!--{{#post}}{{content}}{{/post}} --}}
-    </main>
-  </body>
-</html>
+        {{/foreach}}
+        {{/get}}
+    </div>
+  </div>
+  {{/post}}
+</div>
