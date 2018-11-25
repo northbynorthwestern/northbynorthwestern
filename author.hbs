@@ -1,14 +1,25 @@
 {{!< default}}
 
-<div class="hold">
+<div class="author-page">
 {{#author}}
-  <h1 class="author-name">{{name}}</h1>
-  <div class="author-bio">
-    {{bio}}
+  <div class="author-info">
+    <h1 class="author-name">{{name}}</h1>
+    {{#if twitter}}
+      <a href="" class="social-media-link"><img class="nbn-social-media-icon" src={{asset "images/social-media/twitter-purple.png"}}></a>
+    {{/if}}
+    {{#if website}}
+      <a href="" class="social-media-link"><img class="nbn-social-media-icon" src={{asset "images/social-media/link-small.png"}}></a>
+    {{/if}}
   </div>
-  <img src={{profile_image}} alt='{{name}}'>
-
+  <div class="author-bio-container">
+    <p class="author-bio-text">{{bio}}</p>
+  </div>
 {{/author}}
+{{#foreach posts}}
+  <div class="author-post-card">
+    {{> "author-post-card"}}
+  </div>
+{{/foreach}}
 </div>
 
 

@@ -7,7 +7,6 @@
   <div class="section-posts">
     {{#get "posts" filter="tag:{{name}}"}}
       {{#foreach posts}}
-        <p> woot </p>
         {{> "front-page-post-card"}}
       {{/foreach}}
     {{/get}}

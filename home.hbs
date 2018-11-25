@@ -13,9 +13,9 @@
   <div class="post-card-container">
     {{#foreach posts limit="4"}}
       {{#unless featured}}
-        <a href="{{post.url}}" class="no-style">
+        <div class="whats-up-post-card">
           {{> "front-page-post-card"}}
-        </a>
+        </div>
       {{/unless}}
     {{/foreach}}
   </div>
