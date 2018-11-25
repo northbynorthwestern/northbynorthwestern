@@ -1,8 +1,14 @@
 <div class="feature-card-container-wrapper">
-  <img src="./../assets/images/front-feature.jpg" class="feature-photo">
+  <a href="{{url}}"><img src="{{feature_image}}" class="feature-photo"></a>
   <div class="feature-headline">
-    <h1 class="title"> 4th and 1 stop clinches Northwestern upset of #20 Michigan State </h1>
-    <h3 class="byline"><a href="">Shreyas Iyer,</a> Sports Writer </h3>
-    <h3 class="date"> 10/07/18 6:22 p.m. </h3
+    <a href="{{url}}"><h1 class="title"> {{title}} </h1></a>
+    {{#if authors}}
+      <h3 class="byline">
+        {{authors separator=", "}}
+      </h3>
+    {{else}}
+      {{#author}}<h3 class="byline"><a href={{url}}>{{name}},</a> {{location}} </h3>{{/author}}
+    {{/if}}
+    <h3 class="date"> {{date published_at format='MM/DD/YY'}}</h3>
   </div>
-</div>
+</a></div>

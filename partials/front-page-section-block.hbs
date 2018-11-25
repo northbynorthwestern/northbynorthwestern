@@ -1,0 +1,14 @@
+<div class="section-block">
+  <div class="section-block-header">
+    <h3 class="section-name"><a href="{{url}}">{{name}}</a></h3>
+    <h3 class="post-card-more"><a href="{{url}}" class="post-card-more-link">More</a></h3>
+  </div>
+  <div class="section-block-divider"></div>
+  <div class="section-posts">
+    {{#get "posts" filter="tag:{{slug}}" limit="4"}}
+      {{#foreach posts}}
+        {{> "front-page-post-card"}}
+      {{/foreach}}
+    {{/get}}
+  </div>
+</div>
