@@ -1,0 +1,19 @@
+<div class="article-page">
+  <div class="article-page">
+    <div class="nav-sidebar">
+      {{#get "tags" limit="all"}}
+        {{#foreach tags}}
+          {{> "nav-sidebar-sections" }}
+        {{/foreach}}
+      {{/get}}
+    </div>
+  </div>
+  {{#post}}
+  <div class="article-container">
+    {{> "contact-main"}}
+  </div>
+  {{#get "authors" limit="all"}}
+    {{authors separator="<br>"}}
+  {{/get}}
+  {{/post}}
+</div>
