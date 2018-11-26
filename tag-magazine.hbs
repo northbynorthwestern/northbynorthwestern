@@ -1,0 +1,8 @@
+<h1> hi </h1>
+{{#post}} {{id}} {{/post}}
+
+{{#get posts tag="magazine"}}
+  {{#foreach post}}
+    {{> "magazine-card"}}
+  {{/foreach}}
+{{/get}}

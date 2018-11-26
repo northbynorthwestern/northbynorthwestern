@@ -1,0 +1,16 @@
+{{#if feature_image}}
+  <img src="{{feature_image}}" width="100%">
+{{/if}}
+<h1 class="title"> {{title}} </h1>
+{{#if authors}}
+  <h3 class="byline">
+  {{#foreach authors}}
+    <h3 class="byline"><a href={{url}}>{{name}},</a> {{location}} </h3>
+  {{/foreach}}
+{{else}}
+{{#author}}<h3 class="byline"><a href={{url}}>{{name}},</a> {{location}} </h3>{{/author}}
+{{/if}}
+<h3 class="date"> {{date published_at format='MM/DD/YY, hh:mm a'}} </h3>
+<div class="article-body">
+  <p> {{content}} </p>
+</div>

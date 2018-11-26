@@ -1,0 +1,13 @@
+<div class="related-content-sidebar">
+    <h3 class="related-author-more"><a href="{{primary_author.url}}">Other stories by this author</a></h3>
+    {{#get "posts" filter="authors:{{primary_author.slug}}+id:-{{id}}" limit='3'}}
+    {{#foreach posts}}
+    {{^has tag="magazine"}}
+      <div class="author-related-post">
+        {{> "front-page-post-card"}}
+      </div>
+    {{/has}}
+    {{/foreach}}
+    {{/get}}
+    <h3 class="related-author-more"><a href="{{primary_author.url}}">See all &gt;&gt;</a></h3>
+</div>
