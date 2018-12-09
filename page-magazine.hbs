@@ -1,8 +1,28 @@
-<h1> hi </h1>
-{{#post}} {{id}} {{/post}}
+{{!< default}}
 
-{{#get posts tag="magazine"}}
-  {{#foreach post}}
-    {{> "magazine-card"}}
-  {{/foreach}}
-{{/get}}
+<div class="article-page">
+  <div class="article-page">
+    <div class="nav-sidebar">
+      {{#get "tags" limit="all"}}
+        {{#foreach tags}}
+          {{> "nav-sidebar-sections" }}
+        {{/foreach}}
+      {{/get}}
+    </div>
+  </div>
+  {{#post}}
+    {{#if feature_image}}
+      <img src="{{feature_image}}" width="100%">
+    {{/if}}
+    <div class="article-container">
+      <h1 class="title"> {{title}} </h1>
+      <div class="article-body">
+        {{#get posts tag="magazine"}}
+          {{#foreach post}}
+            {{> "magazine-card"}}
+          {{/foreach}}
+        {{/get}}
+      </div>
+    </div>
+  {{/post}}
+</div>
