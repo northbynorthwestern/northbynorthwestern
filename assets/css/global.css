@@ -156,6 +156,11 @@ a:hover {
   color: var(--pink);
 }
 
+article img {
+  display: block;
+  max-width: 100%;
+}
+
 
 /* 3. Site Header - Banner
 /* ---------------------------------------------------------- */
@@ -191,17 +196,33 @@ h1.nbn-head {
   margin-bottom: 0px;
 }
 
-h3.menu {
-  color: white;
+h3.menu, h3.section-option {
   font-size: .9em;
   font-weight: 200;
 }
 
-div.site-nav {
+h3.menu {
+  color: white;
+}
+
+h3.section-option {
+  color: black;
+}
+
+div.site-nav, div.sections-nav {
   display: flex;
   flex-direction: row;
   width: 125%;
   justify-content: space-between;
+}
+
+div.sections-nav {
+  display: none;
+  /* position: absolute; */
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 }
 
 img.nbn-social-media-icon {
@@ -211,7 +232,8 @@ img.nbn-social-media-icon {
 }
 
 #section-dropdown:hover {
-  color: var(--pink);
+  /* color: var(--pink);  not needed */
+  margin-bottom: 20px;
 }
 
 .dropdown {
@@ -219,6 +241,11 @@ img.nbn-social-media-icon {
     display: inline-block;
 }
 
+.dropdown:hover .sections-nav {
+  display: block;
+}
+
+/*
 .dropdown-content {
     display: none;
     position: absolute;
@@ -232,6 +259,7 @@ img.nbn-social-media-icon {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+*/
 
 /* 4. Front Page Feature Card (featured top story)
 /* ---------------------------------------------------------- */
@@ -261,6 +289,11 @@ div.article-page {
 
 /* 6.1 Navigation Sidebar + Related Content Sidebar */
 /**/
+div.article-sidebar-container {
+  display: flex;
+  flex-direction: row;
+}
+
 div.nav-sidebar, div.related-content-sidebar {
   display: flex;
   flex-direction: column;
@@ -291,11 +324,19 @@ div.article-container {
   padding: 0% 5%;
 }
 
-h3.related-author-more {
+h3.author-related-more {
   font-weight: 600;
   margin-bottom: 1%;
   color: var(--purple)
 }
+
+div.author-posts {
+  margin-bottom: 2rem;
+}
+
+/* .kg-image {
+  width: 200px;
+} */
 
 
 /* 5. Front Page Post Card (stories in the "What's up" section)
@@ -1034,7 +1075,7 @@ body {
 /* 5. Site Navigation
 /* ---------------------------------------------------------- */
 
-.site-nav {
+.site-nav, .sections-nav {
     position: relative;
     z-index: 300;
     display: flex;
@@ -1045,19 +1086,6 @@ body {
     font-size: 1.2rem;
 }
 
-.site-nav-left {
-    display: flex;
-    align-items: center;
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    margin-right: 10px;
-    padding-bottom: 80px;
-    letter-spacing: 0.4px;
-    white-space: nowrap;
-
-    -ms-overflow-scrolling: touch;
-}
 
 /* Site Nav Hack Explanation (above):
 
@@ -1067,6 +1095,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 
 */
 
+/*
 .site-nav-logo {
     flex-shrink: 0;
     display: block;
@@ -1088,6 +1117,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     width: auto;
     height: 21px;
 }
+*/
 
 .nav {
     display: flex;

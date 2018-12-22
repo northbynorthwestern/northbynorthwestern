@@ -1,7 +1,7 @@
 {{!< default}}
 
-<div class="article-page">
-  <div class="article-page">
+<div class="article-sidebar-container">
+  <div class="article-sidebar-container">
     <div class="nav-sidebar">
       {{#get "tags" limit="all"}}
         {{#foreach tags}}
@@ -11,18 +11,11 @@
     </div>
   </div>
   {{#post}}
-    {{#if feature_image}}
-      <img src="{{feature_image}}" width="100%">
-    {{/if}}
-    <div class="article-container">
-      <h1 class="title"> {{title}} </h1>
-      <div class="article-body">
-        {{#get posts tag="magazine"}}
-          {{#foreach post}}
-            {{> "magazine-card"}}
-          {{/foreach}}
-        {{/get}}
+    <article>
+      <div class="article-container">
+        {{> "contact-body"}}
+        <p> In magazine page partial </p>
       </div>
-    </div>
+    </article>
   {{/post}}
 </div>

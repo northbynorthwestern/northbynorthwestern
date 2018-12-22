@@ -9,6 +9,22 @@
   "author": {
     "email": "maxinewhitely@u.northwestern.edu"
   },
+  "config": {
+    "image_sizes": {
+        "s": {
+            "width": 300
+        },
+        "m": {
+            "width": 600
+        },
+        "l": {
+            "width": 1000
+        },
+        "xl": {
+            "width": 2000
+        }
+    }
+  }
   "license": "ISC",
   "keywords": [
     "ghost-theme"

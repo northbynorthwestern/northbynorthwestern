@@ -1,1 +1,21 @@
-<h1> HEYYY </h1>
+{{!< default}}
+
+<div class="article-page">
+  <div class="article-page">
+    <div class="nav-sidebar">
+      {{#get "tags" limit="all"}}
+        {{#foreach tags}}
+          {{> "nav-sidebar-sections" }}
+        {{/foreach}}
+      {{/get}}
+    </div>
+  </div>
+  {{#post}}
+    <article>
+      <div class="article-container">
+        <p> In default page partial </p>
+        {{content}}
+      </div>
+    </article>
+  {{/post}}
+</div>
