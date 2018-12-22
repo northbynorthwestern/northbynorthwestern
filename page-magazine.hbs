@@ -1,7 +1,7 @@
 {{!< default}}
 
-<div class="article-page">
-  <div class="article-page">
+<div class="article-sidebar-container">
+  <div class="article-sidebar-container">
     <div class="nav-sidebar">
       {{#get "tags" limit="all"}}
         {{#foreach tags}}
@@ -13,11 +13,9 @@
   {{#post}}
     <article>
       <div class="article-container">
-        {{> "article-body"}}
+        {{> "contact-body"}}
+        <p> In magazine page partial </p>
       </div>
     </article>
-    <div class="content-sidebar">
-      {{> "related-content-sidebar"}}
-    </div>
   {{/post}}
 </div>

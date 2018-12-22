@@ -121,12 +121,6 @@ h3.date {
 
 }
 
-h3.menu {
-  color: white;
-  font-size: .9em;
-  font-weight: 200;
-}
-
 h4.nav-sidebar-sections {
   font-family: 'PT Sans Narrow', sans-serif;
   font-size: 1.3em;
@@ -158,11 +152,21 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  color: var(--pink);
+}
 
-/* 3. Site Header
+article img {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* 3. Site Header - Banner
 /* ---------------------------------------------------------- */
 div.banner-container {
   background-color: var(--purple);
+  color: var(--white);
   height: 100px;
   padding: 0px 40px;
   display: flex;
@@ -180,7 +184,6 @@ div.banner-side {
 img.nbn-banner-logo {
   width: auto;
   height: 80px;
-  border-color: orange;
   padding: 5px;
 }
 
@@ -190,15 +193,36 @@ div.head-and-nav {
 
 h1.nbn-head {
   font-size: 2.5em;
-  color: var(--white);
   margin-bottom: 0px;
 }
 
-div.site-nav {
+h3.menu, h3.section-option {
+  font-size: .9em;
+  font-weight: 200;
+}
+
+h3.menu {
+  color: white;
+}
+
+h3.section-option {
+  color: black;
+}
+
+div.site-nav, div.sections-nav {
   display: flex;
   flex-direction: row;
   width: 125%;
   justify-content: space-between;
+}
+
+div.sections-nav {
+  display: none;
+  /* position: absolute; */
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 }
 
 img.nbn-social-media-icon {
@@ -206,6 +230,36 @@ img.nbn-social-media-icon {
   height: 20px;
   padding: 5px;
 }
+
+#section-dropdown:hover {
+  /* color: var(--pink);  not needed */
+  margin-bottom: 20px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown:hover .sections-nav {
+  display: block;
+}
+
+/*
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+*/
 
 /* 4. Front Page Feature Card (featured top story)
 /* ---------------------------------------------------------- */
@@ -235,6 +289,11 @@ div.article-page {
 
 /* 6.1 Navigation Sidebar + Related Content Sidebar */
 /**/
+div.article-sidebar-container {
+  display: flex;
+  flex-direction: row;
+}
+
 div.nav-sidebar, div.related-content-sidebar {
   display: flex;
   flex-direction: column;
@@ -265,11 +324,19 @@ div.article-container {
   padding: 0% 5%;
 }
 
-h3.related-author-more {
+h3.author-related-more {
   font-weight: 600;
   margin-bottom: 1%;
   color: var(--purple)
 }
+
+div.author-posts {
+  margin-bottom: 2rem;
+}
+
+/* .kg-image {
+  width: 200px;
+} */
 
 
 /* 5. Front Page Post Card (stories in the "What's up" section)
@@ -491,7 +558,7 @@ h3.section-name {
 /* 5. Site Footer
 /* ---------------------------------------------------------- */
 
-.footer-all {
+/* .footer-all {
   margin-top: 75px;
   min-height: 100px;
 }
@@ -499,6 +566,17 @@ h3.section-name {
 .footer-wrapper {
   display: flex;
   flex-direction: row;
+} */
+
+div.footer-container {
+  background-color: var(--white);
+  color: var(--purple);
+  height: 100px;
+  padding: 0px 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .footer-column {
@@ -997,7 +1075,7 @@ body {
 /* 5. Site Navigation
 /* ---------------------------------------------------------- */
 
-.site-nav {
+.site-nav, .sections-nav {
     position: relative;
     z-index: 300;
     display: flex;
@@ -1008,19 +1086,6 @@ body {
     font-size: 1.2rem;
 }
 
-.site-nav-left {
-    display: flex;
-    align-items: center;
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    margin-right: 10px;
-    padding-bottom: 80px;
-    letter-spacing: 0.4px;
-    white-space: nowrap;
-
-    -ms-overflow-scrolling: touch;
-}
 
 /* Site Nav Hack Explanation (above):
 
@@ -1030,6 +1095,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 
 */
 
+/*
 .site-nav-logo {
     flex-shrink: 0;
     display: block;
@@ -1051,6 +1117,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     width: auto;
     height: 21px;
 }
+*/
 
 .nav {
     display: flex;

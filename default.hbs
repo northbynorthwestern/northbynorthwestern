@@ -21,7 +21,9 @@
   </head>
   <body>
     <header>
-      {{> "banner" }}
+      <div class="banner-container">
+        {{> "banner" }}
+      </div>
     </header>
     <main>
       {{{body}}}
@@ -29,7 +31,11 @@
 
     {{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
     <footer>
-      {{> "footer" }}
+      <hr>
+      <hr>
+      <div class="footer-container">
+        {{> "footer" }}
+      </div>
       {{ghost_foot}}
     </footer>
   </body>
