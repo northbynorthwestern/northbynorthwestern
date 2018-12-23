@@ -449,7 +449,8 @@ div.whats-up-post-card {
 .post-card-text-container {
   display: flex;
   flex-direction: column;
-  max-width: fit-content;
+  width: 100%;
+  /* max-width: fit-content; */
   align-content: space-around;
 }
 
