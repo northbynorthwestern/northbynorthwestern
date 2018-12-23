@@ -165,10 +165,11 @@ article img {
 /* 3. Site Header - Banner
 /* ---------------------------------------------------------- */
 div.banner-container {
-  background-color: var(--purple);
-  color: var(--white);
+  /* background-color: var(--purple); */
+  /* color: var(--white); */
+  color: var(--purple);
   height: 100px;
-  padding: 0px 40px;
+  padding: 5px 40px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -184,7 +185,7 @@ div.banner-side {
 img.nbn-banner-logo {
   width: auto;
   height: 80px;
-  padding: 5px;
+  padding: 5px 5px 5px 0;
 }
 
 div.head-and-nav {
@@ -202,13 +203,15 @@ h3.menu, h3.section-option {
 }
 
 h3.menu {
-  color: white;
+  /* color: white; */
+  color: var(--purple);
 }
 
 h3.section-option {
   color: black;
 }
 
+/* less than 950px and the site nav should go away into a small lil bby menu */
 div.site-nav, div.sections-nav {
   display: flex;
   flex-direction: row;
@@ -243,6 +246,25 @@ img.nbn-social-media-icon {
 
 .dropdown:hover .sections-nav {
   display: block;
+}
+
+.banner-line {
+  margin: 0 40px;
+  height: 0.5px;
+  background-color: #59437f24;
+}
+
+.site-sections {
+  margin: 0px 40px;
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+}
+
+h3.section {
+  font-size: .7em;
+  font-weight: 200;
+  color: var(--purple);
 }
 
 /*
