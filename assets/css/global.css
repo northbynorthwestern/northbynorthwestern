@@ -415,10 +415,10 @@ div.whats-up-post-card {
 
 .post-card {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   max-width: fit-content;
-  padding: 5px 0px;
-  align-items: center;
+  margin: 5px 5px 5px 0px;
+  align-items: flex-start;
   /* margin: 0px 10px; */
     /* flex: 1 1 300px;
     display: flex;
@@ -435,7 +435,7 @@ div.whats-up-post-card {
 
 .post-card-image {
     width: auto;
-    height: 80px;
+    height: 130px;
     margin-right: 2px;
     /* background: var(--lightgrey) no-repeat center center; */
     /* background-size: cover; */
@@ -443,7 +443,7 @@ div.whats-up-post-card {
 
 .post-card-image-resize {
   overflow: hidden;
-  width: 110px;
+  /* width: 110px; */
 }
 
 .post-card-text-container {
@@ -464,15 +464,18 @@ p.post-card-text {
 p.post-card-title {
   font-weight: 400;
   font-size: 1em;
-  max-width: 150px;
+  min-width: 95%;
 }
 
 p.post-card-author {
-  font-weight: 700;
-  text-transform: uppercase;
+  color: black;
+  font-weight: lighter;
+  text-transform: capitalize;
+  /* font-weight: 700; */
+  /* text-transform: uppercase; */
   font-size: .9em;
-  max-width: 150px;
-  color: var(--darkgrey);
+  max-width: 100%;
+  /* color: var(--darkgrey); */
 }
 
 a.post-card-text-link {
@@ -557,8 +560,10 @@ a.large-post-card-text-link {
 }
 
 div.section-block {
-  width: 30%;
+  width: 100%;
   margin: 0% 3% 4% 0%;
+  display: flex;
+  flex-direction: column;
 }
 
 div.section-block-header {
@@ -586,6 +591,10 @@ h3.section-name {
 
 .section-posts {
   margin-top: 1.5%;
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+  width: 100%;
 }
 
 
