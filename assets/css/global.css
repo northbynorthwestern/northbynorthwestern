@@ -91,9 +91,15 @@ h1 {
   font-weight: bold;
 }
 
-h1.title {
+h1.front-page-title {
   font-size: 2.8em;
   line-height: 97.5%;
+}
+
+h1.post-title {
+  font-size: 2.8em;
+  line-height: 97.5%;
+  font-weight: normal;
 }
 
 h2.subtitle {
@@ -343,7 +349,13 @@ div.article-body {
 
 div.article-container {
   background-color: var(--white);
-  padding: 0% 5%;
+  /* padding: 0% 5%; */
+}
+
+article.article-post {
+  width: 75%;
+  margin: 0 auto;
+  max-width: 700px;
 }
 
 h3.author-related-more {

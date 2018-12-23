@@ -1,23 +1,11 @@
 {{!< default}}
 
 <div class="article-page">
-  <div class="article-page">
-    <div class="nav-sidebar">
-      {{#get "tags" limit="all"}}
-        {{#foreach tags}}
-          {{> "nav-sidebar-sections" }}
-        {{/foreach}}
-      {{/get}}
-    </div>
-  </div>
   {{#post}}
-    <article>
+    <article class="article-post">
       <div class="article-container">
         {{> "article-body"}}
       </div>
     </article>
-      <div class="content-sidebar">
-        {{> "related-content-sidebar"}}
-      </div>
   {{/post}}
 </div>
