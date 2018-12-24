@@ -43,6 +43,7 @@ production stylesheet in assets/built/global.css
     /* General Colors */
     --purple: #59437f;
     --darkgrey: #15171A;
+    --mediumgrey: #535353;
     --lightgrey: #c5d2d9;
     --lightestgrey: #f4f8fb;
     --black: #17202a;
@@ -82,9 +83,9 @@ body {
   background: var(--white);
 }
 
-main {
+/* main {
   padding: 2.5% 5%;
-}
+} */
 
 h1 {
   font-family: 'PT Sans Narrow', sans-serif;
@@ -110,21 +111,29 @@ h3 {
   font-family: 'Work Sans', sans-serif;
   text-transform: uppercase;
   font-size: .9em;
-  color: darkgrey;
+  color: var(--darkgrey);
   font-weight: lighter;
   margin: 0;
   letter-spacing: -0.5px;
   font-weight: 400;
 }
 
+h3.byline {
+  font-size: .95rem;
+  text-transform: capitalize;
+}
+
 h3.byline a {
   color: var(--purple);
   font-weight: normal;
-  text-decoration: underline;
+  text-transform: capitalize;
+  text-decoration: none;
 }
 
 h3.date {
-
+  font-size: .8rem;
+  color: var(--mediumgrey);
+  text-transform: capitalize;
 }
 
 h4.nav-sidebar-sections {
@@ -195,12 +204,12 @@ img.nbn-banner-logo {
 }
 
 div.head-and-nav {
-
+  height: fit-content;
 }
 
 h1.nbn-head {
   font-size: 2.5em;
-  margin-bottom: 0px;
+  margin: 0 auto;
 }
 
 h3.menu, h3.section-option {
@@ -218,11 +227,13 @@ h3.section-option {
 }
 
 /* less than 950px and the site nav should go away into a small lil bby menu */
-div.site-nav, div.sections-nav {
+div.site-nav {
   display: flex;
   flex-direction: row;
   width: 125%;
+  height: fit-content;
   justify-content: space-between;
+  margin-top: -.25rem;
 }
 
 div.sections-nav {
@@ -255,7 +266,7 @@ img.nbn-social-media-icon {
 }
 
 .banner-line {
-  margin: 0 40px;
+  margin: 0 5%;
   height: 0.5px;
   background-color: #59437f24;
 }
@@ -295,7 +306,7 @@ div.feature-card-container-wrapper {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 2.5%;
+  margin: 2.5% 5%;
 }
 
 .feature-photo {
@@ -368,6 +379,9 @@ div.author-posts {
   margin-bottom: 2rem;
 }
 
+
+/* 6. Article Page - IMAGES
+/* ---------------------------------------------------------- */
 /* .kg-image {
   width: 200px;
 } */
@@ -416,7 +430,7 @@ div.whats-up-post-card {
 .post-card {
   display: flex;
   flex-direction: column;
-  max-width: fit-content;
+  width: 100%;
   margin: 5px 5px 5px 0px;
   align-items: flex-start;
   /* margin: 0px 10px; */
@@ -450,14 +464,12 @@ div.whats-up-post-card {
   display: flex;
   flex-direction: column;
   width: 100%;
-  /* max-width: fit-content; */
   align-content: space-around;
 }
 
 p.post-card-text {
   font-family: 'PT Sans Narrow', sans-serif;
   font-size: 1em;
-  width: 170px;
   margin: 0 0 0 3px;
   color: var(--darkgrey);
 }
@@ -487,6 +499,7 @@ a.post-card-text-link {
 p.post-card-date {
   font-size: .8em;
   max-width: 150px;
+  color: var(--mediumgrey);
 }
 
 .post-card-excerpt {
@@ -555,9 +568,24 @@ a.large-post-card-text-link {
 
 /* 5. Front Page Bottom Sections
 /* ---------------------------------------------------------- */
+div.front-page-bottom {
+    display: flex;
+    flex-direction: row;
+    /* width: 100%; */
+    padding: .5% 5%;
+}
+
+div.latest-posts-container {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}
+
 .all-section-blocks {
   display: flex;
   flex-wrap: wrap;
+  width: 75%;
+  padding: 0 0 0 5%;
 }
 
 div.section-block {
@@ -580,8 +608,12 @@ h3.section-name {
 
 .section-block-divider {
   width: 100%;
-  height: 5px;
+  height: .1rem;
   background-color: var(--purple);
+}
+
+.latest-posts-divider {
+  margin-bottom: .5rem;
 }
 
 /* i think this may not be being used */
@@ -591,7 +623,7 @@ h3.section-name {
 }
 
 .section-posts {
-  margin-top: 1.5%;
+  margin-top: .5rem;
   display: flex;
   flex-direction: row;
   overflow: scroll;
@@ -1023,11 +1055,11 @@ body {
     .author-template .post-feed {
         margin-top: -70px;
         padding-top: 0;
-    }
+    } /*
     .home-template .site-nav {
         position: relative;
         top: -70px;
-    }
+    } */
 }
 
 

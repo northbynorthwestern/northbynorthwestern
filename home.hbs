@@ -8,10 +8,25 @@
   {{/get}}
 </div>
 
-<div class="all-section-blocks">
-  {{#get "tags" limit="all"}}
-    {{#foreach tags}}
-      {{> "front-page-section-block"}}
-    {{/foreach}}
-  {{/get}}
+<div class="front-page-bottom">
+
+  <div class="latest-posts-container">
+    <div class="section-block-header">
+      <h3 class="section-name"><a href="/latest">Latest</a></h3>
+    </div>
+    <div class="section-block-divider latest-posts-divider"></div>
+    {{#get "posts" include="authors"}}
+      {{#foreach posts}}
+        {{> "latest-post-card"}}
+      {{/foreach}}
+    {{/get}}
+  </div>
+
+  <div class="all-section-blocks">
+    {{#get "tags" limit="all"}}
+      {{#foreach tags}}
+        {{> "front-page-section-block"}}
+      {{/foreach}}
+    {{/get}}
+  </div>
 </div>
