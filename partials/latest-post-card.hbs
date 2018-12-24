@@ -1,0 +1,15 @@
+<div class="post-card">
+  <a href="{{url}}">
+  <div class="post-card-text-container">
+    <p class="post-card-text post-card-title">
+      <a class="post-card-text-link" href={{url}}> {{title}} </a>
+    </p>
+    {{#if authors}}
+      <p class="post-card-text post-card-author">{{authors separator=", "}}</p>
+    {{else}}
+      {{#author}}<p class="post-card-text post-card-author">{{name}}</p>{{/author}}
+    {{/if}}
+    <p class="post-card-text post-card-date"> {{date published_at format='MMM. DD, YYYY'}} </p>
+  </div>
+</a>
+</div>
