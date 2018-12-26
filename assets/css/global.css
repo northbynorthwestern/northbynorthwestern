@@ -149,7 +149,8 @@ h4.nav-sidebar-sections {
 p, li {
   font-family: 'Lora', serif;
   font-weight: normal;
-  font-size: 1em;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
 }
 p.caption {
   font-weight: bold;
@@ -169,11 +170,6 @@ a {
 
 a:hover {
   color: var(--pink);
-}
-
-article img {
-  display: block;
-  max-width: 100%;
 }
 
 
@@ -352,10 +348,18 @@ div.author-related-post {
   margin: 2.5% 0%;
 }
 
+.article-header {
+  width: 75%;
+  margin: auto;
+  max-width: 700px;
+}
+
 /* 6.1 Article Body */
 /**/
-div.article-body {
-
+div.article-body p {
+  width: 75%;
+  margin: 1rem auto;
+  max-width: 700px;
 }
 
 div.article-container {
@@ -364,9 +368,7 @@ div.article-container {
 }
 
 article.article-post {
-  width: 75%;
-  margin: 0 auto;
-  max-width: 700px;
+
 }
 
 h3.author-related-more {
@@ -377,6 +379,54 @@ h3.author-related-more {
 
 div.author-posts {
   margin-bottom: 2rem;
+}
+
+@media (max-width: 800px) {
+  article img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+article img {
+  /* width: 75%;
+  max-width: 700px;
+  margin: 0 auto; */
+  width: 100%;
+}
+
+figure {
+  margin: 3rem 9rem;
+  min-width: 700px;
+}
+
+figure + em {
+  /* margin-top: 0; */
+}
+
+figcaption {
+  width: 100%;
+}
+
+figcaption a em {
+  font-size: .8rem;
+  color: var(--lightgrey);
+  text-decoration: underline var(--lightgrey)
+}
+
+/* a:figcaption {}*/
+
+.kg-width-wide {
+  margin: 3rem;
+}
+
+.kg-card.kg-image-card {
+
+}
+
+.kg-width-full {
+  margin: 3rem 0;
+  width: 100%;
 }
 
 
