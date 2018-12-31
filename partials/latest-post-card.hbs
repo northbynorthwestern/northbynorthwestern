@@ -1,4 +1,4 @@
-<div class="post-card">
+<div class="post-card latest-post-card">
   <a href="{{url}}">
   <div class="post-card-text-container">
     <p class="post-card-text post-card-title">
@@ -9,7 +9,7 @@
     {{else}}
       {{#author}}<p class="post-card-text post-card-author">{{name}}</p>{{/author}}
     {{/if}}
-    <p class="post-card-text post-card-date"> {{date published_at format='MMM. DD, YYYY'}} </p>
+    <p class="post-card-text post-card-date latest-post-card-date"> {{date published_at format='MMM. DD, YYYY'}} </p>
   </div>
 </a>
 </div>

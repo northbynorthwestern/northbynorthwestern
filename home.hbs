@@ -1,4 +1,10 @@
 {{!< default}}
+<header>
+  <div class="banner-container">
+    {{> "banner" }}
+  </div>
+  <!-- <div class="section-block-divider banner-divider"> </div> -->
+</header>
 
 <div>
   {{#get "posts" filter="featured:true" limit="1" include="authors"}}
