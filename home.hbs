@@ -29,6 +29,22 @@
   </div>
 
   <div class="all-section-blocks">
+
+    <div id="horizontal-latest-posts" class="section-block">
+      <div class="section-block-header">
+        <h3 class="section-name">Latest</h3>
+      </div>
+      <div class="section-block-divider"></div>
+      <div class="section-posts">
+        {{#get "posts" include="authors"}}
+          {{#foreach posts limit="5"}}
+            {{> "front-page-post-card"}}
+          {{/foreach}}
+        {{/get}}
+      </div>
+    </div>
+
+
     {{#get "tags" limit="all"}}
       {{#foreach tags}}
         {{> "front-page-section-block"}}

@@ -191,7 +191,7 @@ div.banner-container {
   /* color: var(--white); */
   color: var(--purple);
   height: 100px;
-  padding: 0 10px;
+  padding: 0 5% 0 1%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -211,8 +211,8 @@ img.nbn-banner-logo {
 }
 
 .svg-logo {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 }
 
 .svg-path {
@@ -276,8 +276,8 @@ h3.section {
     font-size: 1.1em;
   }
   .svg-logo {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
   }
   .svg-social-icon {
     width: 15px;
@@ -293,20 +293,19 @@ h3.section {
     width: 50px;
     height: 50px;
   }
-}
-
-@media (max-width: 550px) {
-  
+  h1.nbn-head {
+    font-size: 1.6em;
+  }
 }
 
 @media (max-width: 700px) {
   .site-nav {
     display: none;
   }
-  .svg-logo {
+  /* .svg-logo {
     width: 50px;
     height: 50px;
-  }
+  } */
   h1.nbn-head {
     line-height: 1em;
   }
@@ -328,6 +327,9 @@ h3.section {
     width: 60px;
     height: 60px;
   }
+  h1.nbn-head {
+    font-size: 2.2em;
+  }
 }
 
 @media (max-width: 900) {
@@ -341,9 +343,9 @@ h3.section {
       height: 40px;
       font-size: 1.2rem;
   }
-  h1.nbn-head {
+  /* h1.nbn-head {
     font-size: 2.2em;
-  }
+  } */
   .svg-logo {
     width: 60px;
     height: 60px;
@@ -521,7 +523,7 @@ div.author-related-post {
 }
 
 .article-header {
-  width: 75%;
+  width: 85%;
   margin: 0 auto 2rem;
   max-width: 600px;
 }
@@ -530,7 +532,7 @@ div.author-related-post {
 /**/
 div.article-body p {
   /* width: 75%; */
-  width: 90%;
+  width: 85%;
   margin: 1rem auto 1.5rem;
   max-width: 600px;
 }
@@ -864,42 +866,81 @@ h3.section-name {
   width: 100%;
 }
 
+#horizontal-latest-posts {
+  display: none;
+}
+
+@media screen and (max-width: 750px) {
+  div.latest-posts-container {
+    display: none;
+  }
+  .all-section-blocks {
+    width: 100%;
+    padding: 0;
+  }
+  #horizontal-latest-posts {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 751px) {
+  .horizontal-latest-posts {
+    display: none;
+  }
+}
+
 
 /* 5. Site Footer
 /* ---------------------------------------------------------- */
 
-/* .footer-all {
-  margin-top: 75px;
-  min-height: 100px;
-}
 
-.footer-wrapper {
-  display: flex;
-  flex-direction: row;
-} */
-
-div.footer-container {
+.footer-container {
   background-color: var(--white);
-  color: var(--purple);
-  height: 100px;
-  padding: 0px 40px;
+  min-height: fit-content;
+  height: 80px;
+  width: 98%;
+  padding: 0 1%;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
 }
 
-.footer-column {
+.footer-menu-left {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  width: 40%;
+  justify-content: space-between;
 }
 
-p.footer {
-  font-family: 'PT Sans Narrow', sans-serif;
-  font-size: 1em;
-  width: 150px;
-  margin: 0 0 0 3px;
+.footer-copy-right {
+  width: 50%;
+  max-width: 400px;
 }
+
+.footer-info {
+  font-size: .7em;
+  line-height: 1.1em;
+  text-align: right;
+  font-family: 'Work Sans';
+  font-weight: 300;
+  margin: 0 0 3%;
+}
+
+.footer-copyright {
+  font-weight: 600;
+}
+
+@media screen and (max-width: 700px) {
+  .footer-menu-left {
+    flex-direction: column;
+  }
+  .footer-container {
+    height: 100px;
+  }
+}
+
+
 
 /* 7. Author Page, Section Page
 /* ---------------------------------------------------------- */
@@ -1172,17 +1213,6 @@ The first (most recent) post in the list is styled to be bigger than the others 
 
 .home-template .site-header:after {
     display: none;
-}
-
-
-/* Adjust some margins for smaller screens */
-@media (max-width: 650px) {
-    .post-feed {
-        padding-top: 5vw;
-    }
-    .post-card {
-        margin: 0 20px 5vw;
-    }
 }
 
 
