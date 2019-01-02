@@ -215,6 +215,90 @@ img.nbn-banner-logo {
   height: 50px;
 }
 
+.svg-path {
+  fill: var(--black);
+}
+
+.svg-path:hover {
+  fill: var(--purple);
+}
+
+div.head-and-nav {
+  height: fit-content;
+}
+
+h1.nbn-head {
+  margin: 0 auto;
+}
+
+h3.menu, h3.section-option {
+  font-size: .9em;
+  font-weight: 200;
+}
+
+h3.menu {
+  /* color: white; */
+  color: var(--purple);
+}
+
+h3.section-option {
+  color: black;
+}
+
+.svg-social-icon {
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+}
+
+.banner-line {
+  margin: 0 5%;
+  height: 0.5px;
+  background-color: #59437f24;
+}
+
+.site-sections {
+  margin: 0px 40px;
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+}
+
+h3.section {
+  font-size: .7em;
+  font-weight: 200;
+  color: var(--darkgrey);
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+@media (max-width: 450px) {
+  h1.nbn-head {
+    font-size: 1.1em;
+  }
+  .svg-logo {
+    width: 40px;
+    height: 40px;
+  }
+  .svg-social-icon {
+    width: 15px;
+    height: 15px;
+  }
+  div.banner-container {
+    height: 80px;
+  }
+}
+
+@media (min-width: 451px) {
+  .svg-logo {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 550px) {
+  
+}
+
 @media (max-width: 700px) {
   .site-nav {
     display: none;
@@ -222,6 +306,9 @@ img.nbn-banner-logo {
   .svg-logo {
     width: 50px;
     height: 50px;
+  }
+  h1.nbn-head {
+    line-height: 1em;
   }
 }
 
@@ -240,6 +327,46 @@ img.nbn-banner-logo {
   .svg-logo {
     width: 60px;
     height: 60px;
+  }
+}
+
+@media (max-width: 900) {
+  .site-nav {
+      position: relative;
+      z-index: 300;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      overflow-y: hidden;
+      height: 40px;
+      font-size: 1.2rem;
+  }
+  h1.nbn-head {
+    font-size: 2.2em;
+  }
+  .svg-logo {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (min-width: 901px) {
+  .site-nav {
+      position: relative;
+      z-index: 300;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      overflow-y: hidden;
+      height: 40px;
+      font-size: 1.2rem;
+  }
+  h1.nbn-head {
+    font-size: 2.5em;
+  }
+  .svg-logo {
+    width: 80px;
+    height: 80px;
   }
 }
 
@@ -285,146 +412,72 @@ img.nbn-banner-logo {
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .svg-path {fill: var(--purple);}
 
-.svg-path {
-  fill: var(--black);
-}
-
-.svg-path:hover {
-  fill: var(--purple);
-}
-
-div.head-and-nav {
-  height: fit-content;
-}
-
-h1.nbn-head {
-  margin: 0 auto;
-}
-
-h3.menu, h3.section-option {
-  font-size: .9em;
-  font-weight: 200;
-}
-
-h3.menu {
-  /* color: white; */
-  color: var(--purple);
-}
-
-h3.section-option {
-  color: black;
-}
-
-@media (max-width: 900) {
-  .site-nav, .sections-nav {
-      position: relative;
-      z-index: 300;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      overflow-y: hidden;
-      height: 40px;
-      font-size: 1.2rem;
-  }
-  h1.nbn-head {
-    font-size: 2.2em;
-  }
-  .svg-logo {
-    width: 60px;
-    height: 60px;
-  }
-}
-
-@media (min-width: 901px) {
-  .site-nav, .sections-nav {
-      position: relative;
-      z-index: 300;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      overflow-y: hidden;
-      height: 40px;
-      font-size: 1.2rem;
-  }
-  h1.nbn-head {
-    font-size: 2.5em;
-  }
-  .svg-logo {
-    width: 80px;
-    height: 80px;
-  }
-}
-
-div.sections-nav {
-  display: none;
-  /* position: absolute; */
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.collapsed-sections-nav {
-  /* width: 20px;
-  height: 20px;
-  padding: 5px; */
-}
-
-.svg-social-icon {
-  width: 20px;
-  height: 20px;
-  padding: 5px;
-}
-
-#section-dropdown:hover {
-  /* color: var(--pink);  not needed */
-  margin-bottom: 20px;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown:hover .sections-nav {
-  display: block;
-}
-
-.banner-line {
-  margin: 0 5%;
-  height: 0.5px;
-  background-color: #59437f24;
-}
-
-.site-sections {
-  margin: 0px 40px;
-  display: flex;
-  flex-direction: row;
-  align-content: space-between;
-}
-
-h3.section {
-  font-size: .7em;
-  font-weight: 200;
-  color: var(--darkgrey);
-  font-family: 'Roboto Condensed', sans-serif;
-}
 
 /* 4. Front Page Feature Card (featured top story)
 /* ---------------------------------------------------------- */
 div.feature-card-container-wrapper {
+  width: 90%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 2.5% 5%;
+  padding: 2.5% 5%;
+}
+
+h1.front-page-title {
+  font-size: 2.3em;
 }
 
 .feature-photo {
+  max-width: 100%;
+  width: auto;
+  height: auto;
   margin-right: 2.5%;
 }
 
-.feature-headline {
-  margin-left: 30px;
+@media (max-width: 450px) {
+  h1.front-page-title {
+    font-size: 1.4em;
+  }
+  h3.byline {
+    font-size: .9em;
+  }
+  h3.date {
+    font-size: .7em;
+  }
+}
+
+@media (max-width: 750px) {
+  div.feature-card-container-wrapper {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2.5% 5%;
+  }
+  .feature-headline {
+    width: unset;
+    margin-left: 0px;
+  }
+}
+
+@media (min-width: 751px) {
+  div.feature-card-container-wrapper {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2.5% 5%;
+  }
+  .feature-headline {
+    width: 35%;
+    margin-left: 30px;
+  }
+}
+
+@media (min-width: 950px) {
+  h1.front-page-title {
+    font-size: 2.8em;
+  }
 }
 
 /* 6. Article Page

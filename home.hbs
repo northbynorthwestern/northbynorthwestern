@@ -22,7 +22,7 @@
     </div>
     <div class="section-block-divider latest-posts-divider"></div>
     {{#get "posts" include="authors"}}
-      {{#foreach posts}}
+      {{#foreach posts limit="5"}}
         {{> "latest-post-card"}}
       {{/foreach}}
     {{/get}}
