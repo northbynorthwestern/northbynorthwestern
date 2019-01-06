@@ -83,6 +83,7 @@ body {
   margin: 0px;
   background: var(--white);
   max-width: 100%;
+  cursor: default;
 }
 
 h1 {
@@ -92,7 +93,7 @@ h1 {
 }
 
 h1:hover {
-  color: var(--purple);
+  /* color: var(--purple); */
 }
 
 h1.front-page-title {
@@ -429,6 +430,10 @@ h1.front-page-title {
   font-size: 2.3em;
 }
 
+h1.front-page-title:hover {
+  color: var(--purple);
+}
+
 .feature-photo {
   max-width: 100%;
   width: auto;
@@ -667,7 +672,9 @@ div.whats-up-post-card {
 
 .post-card-image {
     width: auto;
-    height: 130px;
+    max-width: 200px;
+    height: auto;
+    max-height: 130px;
     margin-right: 2px;
     /* background: var(--lightgrey) no-repeat center center; */
     /* background-size: cover; */
@@ -942,7 +949,7 @@ h3.section-name {
 
 
 
-/* 7. Author Page, Section Page
+/* 7. Author Page, Section (tag) Page
 /* ---------------------------------------------------------- */
 
 .author-page {
@@ -957,14 +964,14 @@ h3.section-name {
 
 h1.author-name, h1.section-name {
   font-weight: lighter;
-  color: var(--purple);
+  color: var(--black);
   margin: 1% 2.5% 1% 0;
 }
 
 div.author-bio-container {
-  background-color: var(--lightestgrey);
-  max-width: 75%;
-  box-shadow: inset 0 0 10px var(--lightgrey);
+  background-color: var(--white);
+  width: 100%;
+  box-shadow: inset 0 0 10px var(--black);
   margin-bottom: 6%;
 }
 
@@ -975,7 +982,22 @@ p.author-bio-text {
 
 div.author-post-card, div.section-post-card {
   margin-bottom: 1.5%;
+  max-width: 200px;
 }
+
+.section-page, .author-page {
+  padding: 2% 5% 0 1%;
+}
+
+.section-post-cards-all {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+
+
 
 
 
