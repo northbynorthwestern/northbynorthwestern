@@ -1,4 +1,18 @@
-<h1> hi </h1>
+{{!< default}}
+
+<header>
+  <div class="banner-container">
+    {{> "banner" }}
+  </div>
+</header>
+
+<div class="magazine-container">
+
+  <iframe width="100%" height="100%" frameborder="0"
+  src="{{tag.description}}" />
+</div>
+
+{{!--
 {{#post}} {{id}} {{/post}}
 
 {{#get posts tag="magazine"}}
@@ -6,3 +20,4 @@
     {{> "magazine-card"}}
   {{/foreach}}
 {{/get}}
+--}}

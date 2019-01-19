@@ -15,6 +15,7 @@ production stylesheet in assets/built/global.css
   6.1. Navigation Sidebar
   6.2. Article Main
 7. Author Page
+8. Magazine page styling
 
 -- Ghost stuff below..
 4.  Special Templates
@@ -553,7 +554,8 @@ article.article-post {
   margin: 0 auto;
 }
 
-h3.author-related-more {
+/* NOT BEING USED */
+/* h3.author-related-more {
   font-weight: 600;
   margin-bottom: 1%;
   color: var(--purple)
@@ -561,35 +563,54 @@ h3.author-related-more {
 
 div.author-posts {
   margin-bottom: 2rem;
-}
+} */
 
 article img {
-  /* width: 75%;
-  max-width: 600px;
-  margin: 0 auto; */
   width: 100%;
 }
-
 
 /* figure + em {
   margin-top: 0;
 } */
 
-figcaption a em {
-  font-size: .8rem;
-  color: var(--lightgrey);
-  text-decoration: underline var(--lightgrey)
+figcaption {
+  font-family: 'Lora', serif;
+  color: var(--darkgrey);
+  font-size: .8em;
+  width: fit-content;
 }
 
-/* a:figcaption {}*/
-
-.kg-card.kg-image-card {
-
+figcaption em a {
+  font-size: .7rem;
+  color: var(--lightgrey);
+  text-decoration: underline var(--lightgrey)
 }
 
 .kg-width-full {
   margin: 3rem 0;
   width: 100%;
+}
+
+blockquote {
+  font-family: 'PT Sans Narrow';
+  color: var(--darkgrey);
+  font-size: 1.7em;
+  width: 95%;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+/* .gallery-card {
+  margin: auto 0;
+} */
+
+figure.kg-embed-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0;
+  margin: 3rem auto;
+  min-width: 100%;
 }
 
 @media (max-width: 800px) {
@@ -614,11 +635,17 @@ figcaption a em {
     margin: 3rem 9rem;
     min-width: 600px;
   }
+  figure.kg-gallery-card {
+    margin: 3rem 0;
+  }
   .kg-width-wide {
     margin: 3rem;
   }
   figcaption {
-    width: 100%;
+  }
+  blockquote {
+    font-size: 2em;
+    width: 50%;
   }
 }
 
@@ -993,6 +1020,10 @@ p.author-bio-text {
   max-width: 90%;
 }
 
+div.author-post-card {
+  margin: 0 auto 1.5% auto;
+}
+
 div.author-post-card, div.section-post-card {
   margin-bottom: 1.5%;
   max-width: 200px;
@@ -1000,6 +1031,7 @@ div.author-post-card, div.section-post-card {
 
 .section-page, .author-page {
   padding: 2% 5% 0 1%;
+  margin: 0 auto;
 }
 
 .section-post-cards-all {
@@ -1008,7 +1040,24 @@ div.author-post-card, div.section-post-card {
   justify-content: space-between;
 }
 
+.info-post-card-image {
+  width: 100%;
+  height: 100%;
+  margin-right: 2px;
+}
 
+@media screen and (max-width: 700px) {
+  div.section-post-card {
+    max-width: unset;
+  }
+  .info-post-card {
+    /* flex-direction: row; */
+  }
+}
+
+.magazine-container {
+  height: 100vh;
+}
 
 
 
