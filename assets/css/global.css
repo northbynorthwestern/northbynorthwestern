@@ -16,6 +16,7 @@ production stylesheet in assets/built/global.css
   6.2. Article Main
 7. Author Page
 8. Magazine page styling
+9. Admin pages
 
 -- Ghost stuff below..
 4.  Special Templates
@@ -108,6 +109,12 @@ h1.post-title {
   font-weight: normal;
 }
 
+/* h2, h4, h5, h6 {
+  width: 85%;
+  margin: 1rem auto 1.5rem;
+  max-width: 600px;
+} */
+
 h2.subtitle {
   font-family: 'Work Sans', sans-serif;
 }
@@ -121,6 +128,8 @@ h3 {
   margin: 0;
   letter-spacing: -0.5px;
   font-weight: 400;
+  width: 85%;
+  max-width: 600px;
 }
 
 h3.byline {
@@ -1055,12 +1064,21 @@ div.author-post-card, div.section-post-card {
   }
 }
 
+/* ---------------------------------------------------------- */
+/* 8. Magazine page
+/* ---------------------------------------------------------- */
 .magazine-container {
   height: 100vh;
 }
 
-
-
+/* ---------------------------------------------------------- */
+/* 8. Admin pages
+/* ---------------------------------------------------------- */
+.admin-title {
+  /* width: 85%; */
+  margin: 1rem auto 1.5rem;
+  max-width: 600px;
+}
 
 
 
