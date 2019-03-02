@@ -26,6 +26,15 @@
         {{> "latest-post-card"}}
       {{/foreach}}
     {{/get}}
+    <div class="sidebar-ad">
+      {{#get "posts" id="5c76b1581f54796aac6f299c" as |post|}}
+        {{#post}}
+          {{#if feature_image}}
+            <a href={{excerpt}}><img src="{{feature_image}}" class="feature-photo"></a>
+          {{/if}}
+        {{/post}}
+      {{/get}}
+    </div>
   </div>
 
   <div class="all-section-blocks">
