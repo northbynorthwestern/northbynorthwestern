@@ -1,12 +1,12 @@
 <div class="post-card info-post-card">
-  <a href="{{url}}">
+  <a target="_blank" href="{{url}}">
   <div class="post-card-image-resize">
     <img class="info-post-card-image" src="{{feature_image}}">
   </div>
   <!-- <div class="post-card-image" style="background-image: url({{feature_image}})"></div> -->
   <div class="post-card-text-container">
     <p class="post-card-text post-card-title">
-      <a class="post-card-text-link" href={{url}}> {{title}} </a>
+      <a target="_blank" class="post-card-text-link" href={{url}}> {{title}} </a>
     </p>
     {{#if authors}}
       <p class="post-card-text post-card-author">{{authors separator=", "}}</p>

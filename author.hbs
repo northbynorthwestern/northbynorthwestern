@@ -11,12 +11,12 @@
   <div class="author-info">
     <h1 class="author-name">{{name}}</h1>
     {{#if twitter}}
-      <a href="https://twitter.com/{{twitter}}" class="social-media-link" target="_blank">
+      <a target="_blank" href="https://twitter.com/{{twitter}}" class="social-media-link" target="_blank">
         {{> "svg-twitter"}}
       </a>
     {{/if}}
     {{#if website}}
-      <a href={{website}} class="social-media-link">
+      <a target="_blank" href={{website}} class="social-media-link">
         {{> "svg-link"}}
       </a>
     {{/if}}

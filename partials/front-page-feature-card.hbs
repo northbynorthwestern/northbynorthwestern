@@ -1,16 +1,16 @@
 <div class="feature-card-container-wrapper">
-  <a href="{{url}}">
+  <a target="_blank" href="{{url}}">
     <div class="image-resize">
       <img src="{{feature_image}}" class="feature-photo"></a>
     </div>
   <div class="feature-headline">
-    <a class="feature-headline-link" href="{{url}}"><h1 class="front-page-title"> {{title}} </h1></a>
+    <a target="_blank" class="feature-headline-link" href="{{url}}"><h1 class="front-page-title"> {{title}} </h1></a>
     {{#if authors}}
       <h3 class="byline">
         {{authors separator=", "}}
       </h3>
     {{else}}
-      {{#author}}<h3 class="byline"><a href={{url}}>{{name}},</a> {{location}} </h3>{{/author}}
+      {{#author}}<h3 class="byline"><a target="_blank" href={{url}}>{{name}},</a> {{location}} </h3>{{/author}}
     {{/if}}
     <h3 class="date"> {{date published_at format='MMM. DD, YYYY'}}</h3>
   </div>
