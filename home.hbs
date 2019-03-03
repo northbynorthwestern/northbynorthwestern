@@ -7,14 +7,14 @@
 </header>
 
 <div class="front-page-announcement">
-  <p class="announcement">Hello! You're currently on the new and improved version of the northbynorthwestern.com.
-    We've made significant changes to prioritize content and reader experience. In the next few weeks,
+  <p class="announcement">Hello! You are currently on the new and improved version of the northbynorthwestern.com website.
+    We have made significant changes to prioritize content and reader experience. In the next few weeks,
     this site will take the place of the current one. </p>
 
   <p class="announcement">There are still components of the site under development. We appreciate your patience as we add
     finishing touches! </p>
 
-  <p class="announcement"> For comments, questions, concerns or anything else, email <a href="mailto:interactive@northbynorthwestern.com">interactive@northbynorthwestern.com</a>.</p>
+  <p class="announcement">For any comments or questions, email <a href="mailto:webmaster@northbynorthwestern.com">webmaster@northbynorthwestern.com</a>.</p>
 </div>
 
 <div>
@@ -29,7 +29,7 @@
 
   <div class="latest-posts-container">
     <div class="section-block-header">
-      <h3 class="section-name"><a target="_blank" href="/latest">Latest</a></h3>
+      <h3 class="section-name"><a  href="/latest">Latest</a></h3>
     </div>
     <div class="section-block-divider latest-posts-divider"></div>
     {{#get "posts" include="authors"}}
@@ -41,7 +41,7 @@
       {{#get "posts" id="5c76b1581f54796aac6f299c" as |post|}}
         {{#post}}
           {{#if feature_image}}
-            <a target="_blank" href={{excerpt}}><img src="{{feature_image}}" class="feature-photo"></a>
+            <a  href={{excerpt}}><img src="{{feature_image}}" class="feature-photo"></a>
           {{/if}}
         {{/post}}
       {{/get}}
