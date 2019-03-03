@@ -6,6 +6,17 @@
   <!-- <div class="section-block-divider banner-divider"> </div> -->
 </header>
 
+<div class="front-page-announcement">
+  <p class="announcement">Hello! You're currently on the new and improved version of the northbynorthwestern.com.
+    We've made significant changes to prioritize content and reader experience. In the next few weeks,
+    this site will take the place of the current one. </p>
+
+  <p class="announcement">There are still components of the site under development. We appreciate your patience as we add
+    finishing touches! </p>
+
+  <p class="announcement"> For comments, questions, concerns or anything else, email <a href="mailto:interactive@northbynorthwestern.com">interactive@northbynorthwestern.com</a>.</p>
+</div>
+
 <div>
   {{#get "posts" filter="featured:true" limit="1" include="authors"}}
     {{#posts}}
@@ -54,8 +65,8 @@
     </div>
 
 
-    {{#get "tags" limit="all"}}
-      {{#foreach tags}}
+    {{#get "tags" limit="all" }}
+      {{#foreach tags as |tag|}}
         {{> "front-page-section-block"}}
       {{/foreach}}
     {{/get}}

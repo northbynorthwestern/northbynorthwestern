@@ -21,13 +21,15 @@
       </a>
     {{/if}}
   </div>
-  <div class="author-bio-container">
-    <p class="author-bio-text">{{bio}}</p>
-  </div>
+  {{#if bio}}
+    <div class="author-bio-container">
+      <p class="author-bio-text">{{bio}}</p>
+    </div>
+  {{/if}}
 {{/author}}
 
   <div class="section-post-cards-all">
-    {{#foreach posts}}
+    {{#foreach posts limit="10"}}
       <div class="section-post-card">
         {{> "info-page-post-card"}}
       </div>

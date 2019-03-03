@@ -884,6 +884,18 @@ div.front-page-bottom {
     padding: .5% 5%;
 }
 
+div.front-page-announcement {
+    padding: .5% 5%;
+    width: 75%;
+    margin: 0 auto;
+    padding: .5% 5%;
+    background-color: var(--lightestgrey);
+}
+
+p.announcement {
+  font-size: .8em;
+}
+
 div.latest-posts-container {
   display: flex;
   flex-direction: column;
