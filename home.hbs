@@ -1,4 +1,5 @@
 {{!< default}}
+
 <header>
   <div class="banner-container">
     {{> "banner" }}
@@ -64,11 +65,211 @@
       </div>
     </div>
 
+      {{!--
+      The section below used to be:
+        {{#get "tags" limit="all"}}
+          {{#foreach tags as |tag|}}
+            {{%> "front-page-section-block"}}
+          {{/foreach}}
+        {{/get}}
+      However, we need to add more tags and be able to filter them more carefully
+      and until I figure out Ghost JS SDK functionality, I'm setting this section up
+      manually so that we can have all tags we need (for example, a tag for DM that
+      doesn't show up on the front page but does give us a unique section page for the event).
+    --}}
 
-    {{#get "tags" limit="all" }}
-      {{#foreach tags as |tag|}}
-        {{> "front-page-section-block"}}
-      {{/foreach}}
-    {{/get}}
+    <!-- News -->
+    <div class="section-block">
+      <div class="section-block-header">
+        <h3 class="section-name"><a  href="/tag/news">News</a></h3>
+        <h3 class="post-card-more"><a  href="/tag/news" class="post-card-more-link">More</a></h3>
+      </div>
+      <div class="section-block-divider"></div>
+      <div class="section-posts">
+        {{#get "posts" filter="tag:news" limit="7" include="authors"}}
+          {{#foreach posts}}
+            {{> "front-page-post-card"}}
+          {{/foreach}}
+        {{/get}}
+      </div>
+    </div>
+
+    <!-- Politics -->
+    <div class="section-block">
+      <div class="section-block-header">
+        <h3 class="section-name"><a  href="/tag/politics">Politics</a></h3>
+        <h3 class="post-card-more"><a  href="/tag/politics" class="post-card-more-link">More</a></h3>
+      </div>
+      <div class="section-block-divider"></div>
+      <div class="section-posts">
+        {{#get "posts" filter="tag:politics" limit="7" include="authors"}}
+          {{#foreach posts}}
+            {{> "front-page-post-card"}}
+          {{/foreach}}
+        {{/get}}
+      </div>
+    </div>
+
+    <!-- Life-style -->
+    <div class="section-block">
+      <div class="section-block-header">
+        <h3 class="section-name"><a  href="/tag/life-style">Life/Style</a></h3>
+        <h3 class="post-card-more"><a  href="/tag/life-style" class="post-card-more-link">More</a></h3>
+      </div>
+      <div class="section-block-divider"></div>
+      <div class="section-posts">
+        {{#get "posts" filter="tag:life-style" limit="7" include="authors"}}
+          {{#foreach posts}}
+            {{> "front-page-post-card"}}
+          {{/foreach}}
+        {{/get}}
+      </div>
+    </div>
+
+    <!-- Entertainment -->
+    <div class="section-block">
+      <div class="section-block-header">
+        <h3 class="section-name"><a  href="/tag/entertainment">Entertainment</a></h3>
+        <h3 class="post-card-more"><a  href="/tag/entertainment" class="post-card-more-link">More</a></h3>
+      </div>
+      <div class="section-block-divider"></div>
+      <div class="section-posts">
+        {{#get "posts" filter="tag:entertainment" limit="7" include="authors"}}
+          {{#foreach posts}}
+            {{> "front-page-post-card"}}
+          {{/foreach}}
+        {{/get}}
+      </div>
+    </div>
+
+    <!-- Sports -->
+    <div class="section-block">
+      <div class="section-block-header">
+        <h3 class="section-name"><a  href="/tag/sports">Sports</a></h3>
+        <h3 class="post-card-more"><a  href="/tag/sports" class="post-card-more-link">More</a></h3>
+      </div>
+      <div class="section-block-divider"></div>
+      <div class="section-posts">
+        {{#get "posts" filter="tag:sports" limit="7" include="authors"}}
+          {{#foreach posts}}
+            {{> "front-page-post-card"}}
+          {{/foreach}}
+        {{/get}}
+      </div>
+    </div>
+
+    <!-- Science/Tech -->
+    <div class="section-block">
+      <div class="section-block-header">
+        <h3 class="section-name"><a  href="/tag/science-tech">Science/Tech</a></h3>
+        <h3 class="post-card-more"><a  href="/tag/science-tech" class="post-card-more-link">More</a></h3>
+      </div>
+      <div class="section-block-divider"></div>
+      <div class="section-posts">
+        {{#get "posts" filter="tag:science-tech" limit="7" include="authors"}}
+          {{#foreach posts}}
+            {{> "front-page-post-card"}}
+          {{/foreach}}
+        {{/get}}
+      </div>
+    </div>
+
+    <!-- Features -->
+    <div class="section-block">
+      <div class="section-block-header">
+        <h3 class="section-name"><a  href="/tag/features">Features</a></h3>
+        <h3 class="post-card-more"><a  href="/tag/features" class="post-card-more-link">More</a></h3>
+      </div>
+      <div class="section-block-divider"></div>
+      <div class="section-posts">
+        {{#get "posts" filter="tag:features" limit="7" include="authors"}}
+          {{#foreach posts}}
+            {{> "front-page-post-card"}}
+          {{/foreach}}
+        {{/get}}
+      </div>
+    </div>
+
+    <!-- Opinion -->
+    <div class="section-block">
+      <div class="section-block-header">
+        <h3 class="section-name"><a  href="/tag/opinion">Opinion</a></h3>
+        <h3 class="post-card-more"><a  href="/tag/opinion" class="post-card-more-link">More</a></h3>
+      </div>
+      <div class="section-block-divider"></div>
+      <div class="section-posts">
+        {{#get "posts" filter="tag:opinion" limit="7" include="authors"}}
+          {{#foreach posts}}
+            {{> "front-page-post-card"}}
+          {{/foreach}}
+        {{/get}}
+      </div>
+    </div>
+
+    <!-- Creative Writing -->
+    <div class="section-block">
+      <div class="section-block-header">
+        <h3 class="section-name"><a  href="/tag/creative-writing">Creative Writing</a></h3>
+        <h3 class="post-card-more"><a  href="/tag/creative-writing" class="post-card-more-link">More</a></h3>
+      </div>
+      <div class="section-block-divider"></div>
+      <div class="section-posts">
+        {{#get "posts" filter="tag:creative-writing" limit="7" include="authors"}}
+          {{#foreach posts}}
+            {{> "front-page-post-card"}}
+          {{/foreach}}
+        {{/get}}
+      </div>
+    </div>
+
+    <!-- Audio -->
+    <div class="section-block">
+      <div class="section-block-header">
+        <h3 class="section-name"><a  href="/tag/audio">Audio</a></h3>
+        <h3 class="post-card-more"><a  href="/tag/audio" class="post-card-more-link">More</a></h3>
+      </div>
+      <div class="section-block-divider"></div>
+      <div class="section-posts">
+        {{#get "posts" filter="tag:audio" limit="7" include="authors"}}
+          {{#foreach posts}}
+            {{> "front-page-post-card"}}
+          {{/foreach}}
+        {{/get}}
+      </div>
+    </div>
+
+    <!-- Photo -->
+    <div class="section-block">
+      <div class="section-block-header">
+        <h3 class="section-name"><a  href="/tag/photo">Photo</a></h3>
+        <h3 class="post-card-more"><a  href="/tag/photo" class="post-card-more-link">More</a></h3>
+      </div>
+      <div class="section-block-divider"></div>
+      <div class="section-posts">
+        {{#get "posts" filter="tag:photo" limit="7" include="authors"}}
+          {{#foreach posts}}
+            {{> "front-page-post-card"}}
+          {{/foreach}}
+        {{/get}}
+      </div>
+    </div>
+
+    <!-- Video -->
+    <div class="section-block">
+      <div class="section-block-header">
+        <h3 class="section-name"><a  href="/tag/video">Video</a></h3>
+        <h3 class="post-card-more"><a  href="/tag/video" class="post-card-more-link">More</a></h3>
+      </div>
+      <div class="section-block-divider"></div>
+      <div class="section-posts">
+        {{#get "posts" filter="tag:video" limit="7" include="authors"}}
+          {{#foreach posts}}
+            {{> "front-page-post-card"}}
+          {{/foreach}}
+        {{/get}}
+      </div>
+    </div>
+
+
   </div>
 </div>
