@@ -13,7 +13,7 @@
   </div>
 
   <div class="section-post-cards-all">
-    {{#get "posts" filter="tag:{{name}}" include="authors" limit="all"}}
+    {{#get "posts" filter="tag:{{slug}}" include="authors" limit="all"}}
       {{#foreach posts}}
         <div class="section-post-card">
           {{> "info-page-post-card"}}
