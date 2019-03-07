@@ -26,15 +26,17 @@
       <p class="author-bio-text">{{bio}}</p>
     </div>
   {{/if}}
-{{/author}}
 
   <div class="section-post-cards-all">
-    {{#foreach posts limit="10"}}
-      <div class="section-post-card">
-        {{> "info-page-post-card"}}
-      </div>
-    {{/foreach}}
+    {{#get "posts" filter="authors:{{slug}}" limit="all"}}
+      {{#foreach posts}}
+        <div class="section-post-card">
+          {{> "info-page-post-card"}}
+        </div>
+      {{/foreach}}
+    {{/get}}
   </div>
+{{/author}}
 </div>
 
 

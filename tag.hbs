@@ -11,12 +11,15 @@
   <div class="section-info">
     <h1 class="section-name">{{name}}</h1>
   </div>
-{{/tag}}
+
   <div class="section-post-cards-all">
-    {{#foreach posts limit="all"}}
-      <div class="section-post-card">
-        {{> "info-page-post-card"}}
-      </div>
-    {{/foreach}}
+    {{#get "posts" filter="tag:{{name}}" include="authors" limit="all"}}
+      {{#foreach posts}}
+        <div class="section-post-card">
+          {{> "info-page-post-card"}}
+        </div>
+      {{/foreach}}
+    {{/get}}
   </div>
+{{/tag}}
 </div>
