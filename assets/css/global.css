@@ -578,6 +578,12 @@ div.article-body p {
   max-width: 600px;
 }
 
+div.article-body h2 {
+  width: 85%;
+  margin: 1rem auto 1.5rem;
+  max-width: 600px;
+}
+
 div.admin-article-body p {
   /* width: 75%; */
   width: 100%;
