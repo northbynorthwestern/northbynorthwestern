@@ -584,6 +584,18 @@ div.article-body h2 {
   max-width: 600px;
 }
 
+div.article-body h3 {
+  width: 85%;
+  margin: 1rem auto 1.5rem;
+  max-width: 600px;
+}
+
+div.article-body hr {
+  width: 85%;
+  margin: 1rem auto 1.5rem;
+  max-width: 600px;
+}
+
 div.admin-article-body p {
   /* width: 75%; */
   width: 100%;
@@ -685,7 +697,7 @@ figure.kg-embed-card {
     margin: 3rem 0;
   }
   .kg-width-wide {
-    margin: 3rem;
+    margin: 3rem auto;
   }
   figcaption {
   }
@@ -2959,7 +2971,7 @@ Usage (In Ghost editor):
 .kg-gallery-container {
     display: flex;
     flex-direction: column;
-    max-width: 1040px;
+    /* max-width: 1040px; */
     width: 100vw;
 }
 
