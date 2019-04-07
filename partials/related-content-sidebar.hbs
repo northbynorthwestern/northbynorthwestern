@@ -2,7 +2,7 @@
   {{#if authors}}
     {{#foreach authors}}
       <div class="author-posts">
-        <h3 class="author-related-more"><a href="{{url}}">Other stories by {{name}}</a></h3>
+        <h3 class="author-related-more"><a  href="{{url}}">Other stories by {{name}}</a></h3>
         {{#get "posts" filter="authors:{{slug}}+id:-{{id}}" limit="3"}}
           {{#foreach posts}}
             {{^has tag="magazine"}}
@@ -12,12 +12,12 @@
             {{/has}}
           {{/foreach}}
         {{/get}}
-      <h3 class="author-related-more"><a href="{{url}}">See all &gt;&gt;</a></h3>
+      <h3 class="author-related-more"><a  href="{{url}}">See all &gt;&gt;</a></h3>
       </div>
     {{/foreach}}
   {{else}}
     <div class="author-posts">
-      <h3 class="author-related-more"><a href="{{primary_author.url}}">Other stories by {{primary_author.name}}</a></h3>
+      <h3 class="author-related-more"><a  href="{{primary_author.url}}">Other stories by {{primary_author.name}}</a></h3>
       {{#get "posts" filter="authors:{{primary_author.slug}}+id:-{{id}}" limit="3"}}
         {{#foreach posts}}
           {{^has tag="magazine"}}
@@ -27,7 +27,7 @@
           {{/has}}
         {{/foreach}}
       {{/get}}
-      <h3 class="author-related-more"><a href="{{primary_author.url}}">See all &gt;&gt;</a></h3>
+      <h3 class="author-related-more"><a  href="{{primary_author.url}}">See all &gt;&gt;</a></h3>
     </div>
   {{/if}}
 </div>

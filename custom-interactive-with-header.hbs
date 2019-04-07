@@ -1,0 +1,18 @@
+{{!-- Styles'n'Scripts --}}
+ <link rel="stylesheet" type="text/css" href={{asset "css/global.css"}} />
+ <link href="https://fonts.googleapis.com/css?family=Lora|PT+Sans+Narrow:400,700|Work+Sans:200,300,400,600|Roboto+Condensed:300,400,700" rel="stylesheet">
+
+{{!-- This tag outputs SEO meta+structured data and other important settings --}}
+{{ghost_head}}
+
+<header>
+  <div class="banner-container">
+    {{> "banner" }}
+  </div>
+</header>
+
+<body class="embed-body" style="margin: 0px;">
+  {{#post}}
+    <iframe width="100%" height="100%" frameborder="0" src="{{{excerpt}}}" />
+  {{/post}}
+</body>

@@ -1,21 +1,15 @@
 {{!< default}}
 
-<div class="article-page">
-  <div class="article-page">
-    <div class="nav-sidebar">
-      {{#get "tags" limit="all"}}
-        {{#foreach tags}}
-          {{> "nav-sidebar-sections" }}
-        {{/foreach}}
-      {{/get}}
-    </div>
+<header>
+  <div class="banner-container">
+    {{> "banner" }}
   </div>
+</header>
+
+<div class="article-page">
   {{#post}}
-    <article>
-      <div class="article-container">
-        <p> In default page partial </p>
-        {{content}}
-      </div>
+    <article class="article-post">
+        {{> "admin-page-body"}}
     </article>
   {{/post}}
 </div>
