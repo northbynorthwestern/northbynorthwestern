@@ -33,9 +33,13 @@
       <h3 class="section-name"><a  href="/latest">Latest</a></h3>
     </div>
     <div class="section-block-divider latest-posts-divider"></div>
-    {{#get "posts" include="authors"}}
+    {{#get "posts" include="authors,tags"}}
       {{#foreach posts limit="5"}}
-        {{> "latest-post-card"}}
+          {{#has tag="#ignore-latest, #admin, #ad"}}
+              <div></div>
+          {{else}}
+              {{> "latest-post-card"}}
+          {{/has}}
       {{/foreach}}
     {{/get}}
     <div class="sidebar-ad">
@@ -57,9 +61,13 @@
       </div>
       <div class="section-block-divider"></div>
       <div class="section-posts">
-        {{#get "posts" include="authors"}}
+        {{#get "posts" include="authors,tags"}}
           {{#foreach posts limit="5"}}
-            {{> "front-page-post-card"}}
+              {{#has tag="#ignore-latest, #admin, #ad"}}
+                  <div></div>
+              {{else}}
+                  {{> "latest-post-card"}}
+              {{/has}}
           {{/foreach}}
         {{/get}}
       </div>

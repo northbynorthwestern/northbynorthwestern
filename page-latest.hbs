@@ -1,13 +1,27 @@
 {{!< default}}
 
-<div class="article-page">
-  <div class="article-page">
-    <div class="nav-sidebar">
-      {{#get "tags" limit="all"}}
-        {{#foreach tags}}
-          {{> "nav-sidebar-sections" }}
-        {{/foreach}}
-      {{/get}}
-    </div>
+<header>
+  <div class="banner-container">
+    {{> "banner" }}
+  </div>
+</header>
+
+<div class="section-page latest-page">
+  <div class="section-info">
+    <h1 class="section-name">Latest</h1>
+  </div>
+
+  <div class="section-post-cards-all">
+    {{#get "posts" include="authors,tags"}}
+      {{#foreach posts limit="5"}}
+          {{#has tag="#ignore-latest, #admin, #ad"}}
+              <div></div>
+          {{else}}
+            <div class="section-post-card">
+              {{> "info-page-post-card"}}
+            </div>
+          {{/has}}
+      {{/foreach}}
+    {{/get}}
   </div>
 </div>
