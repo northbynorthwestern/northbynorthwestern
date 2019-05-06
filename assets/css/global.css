@@ -395,6 +395,23 @@ h3.section {
   }
 }
 
+#___gcse_0 {
+  padding-left: 5px;
+}
+
+div.gsc-input-box {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  border-radius: 8px;
+}
+
+button.gsc-search-button-v2 {
+  display: none;
+}
+
+/* input.gcs-input  */
+
+
 /* Dropdown Button */
 .dropbtn {
   border: none;
@@ -440,7 +457,13 @@ h3.section {
 .dropdown-content a:hover {background-color: #ddd;}
 
 /* Show the dropdown menu on hover */
+.dropdown:active .dropdown-content {display: block;}
+
+.dropdown:focus .dropdown-content {display: block;}
+
 .dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:visited .dropdown-content {display: block;}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .svg-path {fill: var(--purple);}
